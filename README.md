@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+<h1>NewTab Academy</h1>
+<h2>Projeto em Grupo</h2>
+<h3>Excopo</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h4>CONTEXTO</h4>
 
-## Available Scripts
+<p>Em um dia a dia atuando como front-end é muito comum precisar atuar com visualizações de mensagens, imagens e integrações com API. Portanto, vamos unir todas estas atuações em um único projeto para que você consiga desenvolver em equipe tais experiências.</p>
 
-In the project directory, you can run:
+<h4>SOBRE O PROJETO</h4>
 
-### `npm start`
+<p>O objetivo do projeto é desenvolver uma página web responsiva para visualização de mensagens e imagens com integração com a API do Twitter.</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p>No escopo do trabalho está incluso:</p>
+<ul>
+  <li>Desenvolvimento front-end.</li>
+  <li>Publicação em um repositório online.</li>
+</ul>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h4>PREMISSAS</h4>
 
-### `npm test`
+<p>Este projeto será desenvolvido em grupo.</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p>Este projeto será desenvolvido de maneira incremental utilizando o conhecimento dos módulos HTML, CSS, Javascript e React.</p>
 
-### `npm run build`
+<p>API do Twitter que deve ser utilizada para captura das publicações:</p>
+<p><a href="https://developer.twitter.com/en/docs/twitter-api/tweets/search/introduction">https://developer.twitter.com/en/docs/twitter-api/tweets/search/introduction</a></p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p>Para registro das informações, utilizaremos uma outra API utilizando-a como um banco de dados:</p>
+	<p>Airtable: <a href="https://airtable.com/app6wQWfM6eJngkD4/api/docs#curl/introduction">https://airtable.com/app6wQWfM6eJngkD4/api/docs#curl/introduction</a></p>
+<ul>	
+<li>Usuário: contato@newtab.academy</li>
+<li>Senha: qy9hfCHacwfH6PB</li>
+<li>Na coluna Squad, deve ser preenchido o valor "03-23".</li>
+</ul>
+<h4>PÁGINAS </h4>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p>As duas páginas abaixo são públicas e portanto ficam acessíveis para qualquer usuário.</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+</h5>Home:</h5>
+<ul>
+<li>Campo para digitar uma hashtag para busca.</li>
+<li>Área para visualização das últimas 10 mensagens.</li>
+<li>Área para visualização das últimas 10 imagens.</li>
+</ul>
+<h5>Sobre:</h5>
+<ul>
+<li>Área com breve explicação do projeto.</li>
+<li>Área com os profissionais envolvidos no projeto.</li>
+</ul>
+<h5>Login:</h5>
+<ul>
+<li>Campo de email e senha. Botão "Acessar".</li>
+</ul>
+<h5>PÁGINA RESTRITA</h5>
 
-### `npm run eject`
+<p>A ideia aqui é ter uma área restrita para acompanhar as buscas realizadas.</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<h5>Listagem de buscas</h5>
+<ul>
+<li>Uma tabela com as seguintes colunas:</li>
+	<p>Hashtag, Data e hora</p>
+</ul>
+<h4>SOBRE O LAYOUT</h4>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h5>Versão 1:</h5>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<a href="https://xd.adobe.com/view/2ba85c60-f3f6-488a-9c7f-7363be466dd2-7efb/grid">https://xd.adobe.com/view/2ba85c60-f3f6-488a-9c7f-7363be466dd2-7efb/grid</a>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+<h5>Versão 2:</h5>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<a href="https://xd.adobe.com/view/95e138a3-8987-42bc-89f7-167149acd2c4-c0b2/grid/">https://xd.adobe.com/view/95e138a3-8987-42bc-89f7-167149acd2c4-c0b2/grid/</a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<h4><b>Status do Projeto:</b> ⏳ Em andamento</h4>
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
