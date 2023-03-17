@@ -1,0 +1,150 @@
+html {
+    font-size: 3.865vw; /*com base na proporção de 16px para o tamanho de tela de layout especificado de 414, isso mudará o valor padrão da unidade rem da sua página*/
+}
+
+div.navMenu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 1rem;
+    z-index: 25;
+}
+
+/* Menu transparente*/
+.navMenuWapperHolder {
+    height: 5.875rem;
+}
+
+div.navMenuWapper.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4.375rem;
+    z-index: 20;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div.navMenuWapper div.transpRolagem {
+    width: 100%;
+    height: 4.375rem;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+    filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius=100, MakeShadow=true);
+  
+    opacity: 0.9;
+    z-index: 20;
+}
+/* fim Menu transparente*/
+
+div.navMenu .logoImg {
+    width: 8.125rem;
+    height: 1.438rem;
+    
+}
+
+div.navMenu nav.appNav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+nav.appNav .navLink {
+    width: 6.625rem;
+    height: 1.875rem;
+    background-color: #D842BD;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.438rem;
+    letter-spacing: 0.094rem;
+    box-shadow: 0px 0.188rem 0.375rem #5538EE29;
+    border-radius: 1.563rem;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav.appNav .navLink:hover {
+    text-decoration: underline;
+    border: 1px solid #ffffff;
+}
+
+nav.appNav .margenEntreAzulRosa {
+    width: 0.813rem;
+}
+
+nav.appNav .navLink.linkAzul {
+    background-color: #3633F7;
+}
+
+nav.appNav .navLink.hideLink {
+    display: none;
+}
+
+nav.appNav .navLink img {
+    width: 0.625rem;
+    height: 0.625rem;
+    margin-right: 0.488rem;
+}
+
+@media screen and (min-width: 660px){
+    html {
+        font-size: 0.833vw; /*com base na proporção de 16px para o tamanho da tela de layout especificado de 1920, isso mudará o valor padrão da unidade rem da sua página*/
+    }
+
+    div.navMenu {
+        padding: 2.25rem 4rem;
+    }
+    
+    div.navMenu .logoImg {
+        width: 14.938rem;
+        height: 2.625rem;
+    }
+    
+    nav.appNav .navLink {
+        width: 10.625rem;
+        height: 3.063rem;
+        font-size: 0.813rem;
+        letter-spacing: 0.159rem;
+    }
+    
+    nav.appNav .margenEntreAzulRosa{
+        width: 2.188rem;
+    }
+    
+    nav.appNav .navLink img {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-right: 0.488rem;
+    }
+
+    /* Menu transparente*/
+    .navMenuWapperHolder {
+        height: 7.559375rem;
+    }
+
+    div.navMenuWapper.fixed {
+        height: 7.1875rem;
+    }
+
+    div.navMenuWapper div.transpRolagem {
+        height: 7.1875rem;
+    }
+    /* fim Menu transparente*/
+}

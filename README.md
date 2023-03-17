@@ -28,8 +28,8 @@
 <p>Para registro das informações, utilizaremos uma outra API utilizando-a como um banco de dados:</p>
 	<p>Airtable: <a href="https://airtable.com/app6wQWfM6eJngkD4/api/docs#curl/introduction">https://airtable.com/app6wQWfM6eJngkD4/api/docs#curl/introduction</a></p>
 <ul>	
-<li>Usuário: contato@newtab.academy</li>
-<li>Senha: qy9hfCHacwfH6PB</li>
+<li>Usuário: pegar documentação</li>
+<li>Senha: pegar documentação</li>
 <li>Na coluna Squad, deve ser preenchido o valor "03-23".</li>
 </ul>
 <h4>PÁGINAS </h4>
