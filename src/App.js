@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 //paginas
-import Login from './paginas/Login/Login';
+import Login from './paginas/Login';
 
 function App() {
   return (
