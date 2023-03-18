@@ -1,3 +1,7 @@
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
 html {
     font-size: 3.865vw; /*com base na proporção de 16px para o tamanho de tela de layout especificado de 414, isso mudará o valor padrão da unidade rem da sua página*/
 }
@@ -8,7 +12,6 @@ div.navMenu {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     padding: 2rem 1rem;
     z-index: 25;
 }

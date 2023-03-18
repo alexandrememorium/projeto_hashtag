@@ -16,9 +16,9 @@ function Home() {
 
     return (
         <section>
-
-            
-                <Menu />
+            <div className="homeNav">
+                <Menu headerHeightMobile={32.5} headerHeightDesktop={49.25}/>
+            </div>
             
 
             <div className={styles.header}>
