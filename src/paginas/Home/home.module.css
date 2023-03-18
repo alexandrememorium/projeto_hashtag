@@ -1,0 +1,108 @@
+/* Estilo global */
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+h3,
+p {
+    margin: 0;
+}
+
+/* Estilo da div header */
+
+/* Estilo da div body */
+
+.body {
+    padding: 0px 20px;
+    font-size: 16px;
+}
+
+.body h2 {
+    color: #3634F7;
+    font-size: calc(1vw + 1em);
+    margin: 54px 16px 32px 16px;
+    text-align: center;
+}
+
+.swiper-slide {
+    gap: 15px;
+}
+
+.swiperConteudo {
+    align-items: flex-end;
+    display: flex;
+    height: 230px;
+    position: relative;
+    width: 160px;
+}
+
+.swiperConteudo p {
+    color: #FFFFFF;
+    font-size: calc(0.5vw + 13.5px);
+    margin: 0px 15px 30px 15px;
+    position: absolute;
+    text-align: left;
+}
+
+.swiperConteudo img {
+    object-fit: cover;
+}
+
+.listaApresentada {
+    display: grid;
+    justify-items: center;
+    padding: 50px 0px;
+}
+
+.itemContainer {
+    border: 1px solid #5538EE24;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px #5538EE14;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: auto 1fr;
+    margin-bottom: 30px;
+    opacity: 1;
+    padding: 21px 40px 23px 15px;
+    width: 80%;
+}
+
+.itemContainer img {
+    border-radius: 30px;
+    height: 54px;
+    width: 54px;
+}
+
+article div {
+    align-items: center;
+    color: #292929;
+    display: flex;
+    font-size: 12px;
+    gap: 10px;
+}
+
+article div p {
+    color: #292929;
+    font-size: 10px;
+    opacity: 43%;
+}
+
+article p {
+    color: #292929;
+    font-size: 12px;
+}
+
+article a {
+    color: #3634F7;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+    .listaApresentada {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
