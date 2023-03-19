@@ -8,6 +8,7 @@ import 'swiper/css/pagination';
 
 
 import Menu from '../../componentes/Menu'
+import Rodape from '../../componentes/Rodape'
 import styles from './home.module.css'
 
 function Home() {
@@ -82,6 +83,7 @@ function Home() {
                     })}
                 </div>
             </div>
+            <Rodape></Rodape>
 
         </section >
     )

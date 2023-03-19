@@ -1,9 +1,13 @@
 import React from 'react'
 import styles from './rodape.module.css'
 
-function rodape () {
+export default function rodape() {
 
     return (
-        <footer>@Newtab Academy 2023. Todos os direitos reservados.</footer>
+        <footer className={styles.rodape}>
+            <a className={styles.rodapeTexto}>
+                @Newtab Academy 2023. Todos os direitos reservados.
+            </a>
+        </footer>
     )
 }
