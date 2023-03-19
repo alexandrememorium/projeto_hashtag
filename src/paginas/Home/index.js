@@ -1,8 +1,9 @@
 import React from 'react';
 import 'swiper/swiper-bundle.min.css';
 import Carrossel from '../../componentes/Carrossel';
-import Menu from '../../componentes/Menu/Menu';
+import Menu from '../../componentes/Menu/';
 import styles from './home.module.css';
+import Rodape from '../../componentes/Rodape'
 
 function Home() {
 
@@ -10,6 +11,7 @@ function Home() {
 
     return (
         <section>
+            
             <div className="homeNav">
                 <Menu headerHeightMobile={32.5} headerHeightDesktop={49.25} />
             </div>
@@ -47,6 +49,7 @@ function Home() {
                 </div>
 
             </div>
+            <Rodape />
 
         </section>
     )

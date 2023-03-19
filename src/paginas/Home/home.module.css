@@ -35,7 +35,7 @@ p {
 .listaDeUsuarios {
     display: grid;
     justify-content: center;
-    gap: 2%;
+    gap: 5vw;
     padding: 50px 5vw; 
 }
 

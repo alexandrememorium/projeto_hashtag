@@ -1,6 +1,6 @@
 import React from 'react';
 import './Login.css';
-import Menu from '../../componentes/Menu/Menu';
+import Menu from '../../componentes/Menu';
 
 export default function Login() {
 
