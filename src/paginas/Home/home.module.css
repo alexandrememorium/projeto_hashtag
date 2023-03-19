@@ -27,35 +27,16 @@ p {
     text-align: center;
 }
 
-.swipperSlide {
-    width: 230px;
-}
-
-.swiperConteudo {
-    align-items: flex-end;
-    display: flex;
-    position: relative;  
-}
-
-.swiperConteudo p {
-    color: #FFFFFF;
-    font-size: .8em;
-    margin: 0px 15px 30px 15px;
-    position: absolute;
-    text-align: left;
-}
-
-.swiperConteudo img {
-    border-radius: 21px;
-    width: 100%;
+.carrosselContainer {
+    padding: 0px 5vw;
+    position: relative;
 }
 
 .listaDeUsuarios {
     display: grid;
     justify-content: center;
     gap: 2%;
-    padding: 50px 5vw   ;
-    
+    padding: 50px 5vw; 
 }
 
 .itemContainer {
@@ -119,5 +100,10 @@ p {
 @media screen and (min-width: 1024px){
     .body {
         font-size: 25px;
+    }
+
+    .listaDeUsuarios {
+        padding: 125px 10vw;
+        gap: 6%;
     }
 }
