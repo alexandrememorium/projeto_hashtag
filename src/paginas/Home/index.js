@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 
-import Menu from '../../componentes/Menu/Menu'
+import Menu from '../../componentes/Menu'
 import styles from './home.module.css'
 
 function Home() {
