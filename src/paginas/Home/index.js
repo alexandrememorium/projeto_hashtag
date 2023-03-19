@@ -2,14 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import Menu from '../../componentes/Menu/Menu';
 import styles from './home.module.css';
-import { BsArrowRightCircleFill } from 'react-icons/bs'
 
 
 import Menu from '../../componentes/Menu'
 import Rodape from '../../componentes/Rodape'
-import styles from './home.module.css'
 
 function Home() {
 
@@ -88,7 +85,7 @@ function Home() {
                 </div>
 
             </div>
-            <Rodape></Rodape>
+            <Rodape />
 
         </section>
     )

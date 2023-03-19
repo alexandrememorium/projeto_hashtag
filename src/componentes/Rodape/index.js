@@ -5,9 +5,9 @@ export default function rodape() {
 
     return (
         <footer className={styles.rodape}>
-            <a className={styles.rodapeTexto}>
+            <div className={styles.rodapeTexto}>
                 @Newtab Academy 2023. Todos os direitos reservados.
-            </a>
+            </div>
         </footer>
     )
 }
