@@ -1,10 +1,10 @@
-import React from 'react'
-import { Pagination } from 'swiper'
+import React, { useEffect, useState } from 'react';
+import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import Menu from '../../componentes/Menu/Menu';
+import styles from './home.module.css';
+import { BsArrowRightCircleFill } from 'react-icons/bs'
 
 
 import Menu from '../../componentes/Menu'
@@ -13,13 +13,23 @@ import styles from './home.module.css'
 
 function Home() {
 
-    const itens = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    const [largura, setLargura] = useState();
+    
+    useEffect(() => {
+        function handleResize() {
+            setLargura(window.innerWidth);
+        }
 
+        window.addEventListener('resize', handleResize);
+
+      })
+    const itens = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    
     return (
         <section>
-            <div className="homeNav">
-                <Menu headerHeightMobile={32.5} headerHeightDesktop={49.25}/>
-            </div>
+
+            
+                <Menu />
             
 
             <div className={styles.header}>
@@ -28,29 +38,22 @@ function Home() {
 
             <div className={styles.body}>
                 <h2>Exibindo os 10 resultados mais recentes para #natureza</h2>
-
+                
                 <Swiper
-                    slidesPerView={3}
-                    spaceBetween={15}
-                    pagination={{
-                        clickable: true,
-                    }}
+                    spaceBetween={25}
+                    
+                    pagination={largura >= 768 ? true:false}
+                    navigation={largura >= 768 ? true:false}
                     breakpoints={{
-                        640: {
-                            slidesPerView: 2,
-                            spaceBetween: 50,
+                        300: {
+                            slidesPerView: 3,
                         },
                         768: {
-                            slidesPerView: 4,
-                            spaceBetween: 40,
-                        },
-                        1024: {
                             slidesPerView: 5,
-                            spaceBetween: 50,
                         },
                     }}
-                    modules={[Pagination]}
-                    className="mySwiper"
+                    modules={[Pagination, Navigation]}
+                    
                 >
                     {itens.map((_, index) => {
                         return (
@@ -64,28 +67,30 @@ function Home() {
                     })}
                 </Swiper>
 
-
-                <div className={styles.listaApresentada}>
+                <div className={styles.listaDeUsuarios}>
                     {itens.map((_, index) => {
                         return (
                             <div className={styles.itemContainer} key={index}>
-                                <img src={`https://i.pravatar.cc/150?img=${index}`} alt="Imagem do Perfil" />
-                                <article>
-                                    <div>
-                                        <h3>UserName</h3>
-                                        <p>@twitterusername</p>
+                                <div className={styles.itemContent}>
+                                    <img src={`https://i.pravatar.cc/150?img=${index}`} alt="Imagem do Perfil" />
+                                    <div className={styles.usuarioInfo}>
+                                        <div>
+                                            <h3>UserName</h3>
+                                            <p>@twitterusername</p>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat...</p>
+                                        <a href="#">Ver mais no Twitter</a>
                                     </div>
-                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat...</p>
-                                    <a href="#">Ver mais no Twitter</a>
-                                </article>
+                                </div>
                             </div>
                         )
                     })}
                 </div>
+
             </div>
             <Rodape></Rodape>
 
-        </section >
+        </section>
     )
 }
 
