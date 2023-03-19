@@ -1,0 +1,123 @@
+/* Estilo global */
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+h3,
+p {
+    margin: 0;
+}
+
+/* Estilo da div header */
+
+
+/* Estilo da div body */
+
+.body {
+    padding: 0px 0px;
+    font-size: 16px;
+}
+
+.body h2 {
+    color: #3634F7;
+    font-size: 1.5em;
+    margin: 54px 0px 32px 0px;
+    text-align: center;
+}
+
+.swipperSlide {
+    width: 230px;
+}
+
+.swiperConteudo {
+    align-items: flex-end;
+    display: flex;
+    position: relative;  
+}
+
+.swiperConteudo p {
+    color: #FFFFFF;
+    font-size: .8em;
+    margin: 0px 15px 30px 15px;
+    position: absolute;
+    text-align: left;
+}
+
+.swiperConteudo img {
+    border-radius: 21px;
+    width: 100%;
+}
+
+.listaDeUsuarios {
+    display: grid;
+    justify-content: center;
+    gap: 2%;
+    padding: 50px 5vw   ;
+    
+}
+
+.itemContainer {
+    border: 1px solid #5538EE24;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px #5538EE14;
+    padding: 5%;
+}
+
+.itemContent {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: auto 1fr;
+}
+
+.itemContent img {
+    border-radius: 30px;
+    height: 54px;
+    width: 54px;
+}
+
+.usuarioInfo div {
+    align-items: center;
+    color: #292929;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1em;
+    column-gap: 10px;
+}
+
+.usuarioInfo div p {
+    color: #292929;
+    font-size: .7em;
+    opacity: 43%;
+}
+
+.usuarioInfo > p {
+    color: #292929;
+    font-size: .8em;
+    margin: 10px 0px;
+}
+
+.usuarioInfo a {
+    color: #3634F7;
+    font-size: .8em;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+
+    .body {
+        font-size: 19px;
+    }
+
+    .listaDeUsuarios {
+        grid-template-columns: 50% 50%;
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+    .body {
+        font-size: 25px;
+    }
+}
