@@ -12,10 +12,11 @@ p {
 
 /* Estilo da div header */
 
+
 /* Estilo da div body */
 
 .body {
-
+    padding: 0px 0px;
     font-size: 16px;
 }
 

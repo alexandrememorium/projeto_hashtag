@@ -23,7 +23,11 @@ function Home() {
     
     return (
         <section>
-            <Menu /> 
+
+            
+                <Menu />
+            
+
             <div className={styles.header}>
 
             </div>
