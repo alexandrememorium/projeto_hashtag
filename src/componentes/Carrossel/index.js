@@ -7,10 +7,15 @@ function Carrossel({itens}) {
 
     return (
         <Swiper
+            loop={true}
             modules={[Navigation, Pagination]}
             spaceBetween={15}
             slidesPerView={2}
-          
+            pagination={{
+                
+                dynamicBullets: true,
+                dynamicMainBullets: 2
+            }}
             navigation={true}
             breakpoints={{
                 500: {
@@ -23,6 +28,9 @@ function Carrossel({itens}) {
                     slidesPerView: 5,
                     spaceBetween: 50
                 }
+            }}
+            style={{
+                "--swiper-pagination-bullet-size": "12px"
             }}
         >
             {itens.map((_, index) => {

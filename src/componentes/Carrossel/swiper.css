@@ -8,6 +8,10 @@
     display: none;
 }
 
+.swiper-pagination {
+    display: none;
+}
+
 .carrosselConteudo {
     align-items: flex-end;
     display: flex;
@@ -87,6 +91,11 @@
 
     .swiper-button-prev {
         left: 3%;
+    }
+
+
+    .swiper-pagination {
+        display: block;
     }
 
     .carrosselConteudo img {

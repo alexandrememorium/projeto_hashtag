@@ -30,8 +30,7 @@ function Home() {
                 <div className={styles.listaDeUsuarios}>
                     {itens.map((_, index) => {
                         return (
-                            <div className={styles.itemContainer} key={index}>
-                                <div className={styles.itemContent}>
+                                <div className={styles.itemContent} key={index}>
                                     <img src={`https://i.pravatar.cc/150?img=${index}`} alt="Imagem do Perfil" />
                                     <div className={styles.usuarioInfo}>
                                         <div>
@@ -43,7 +42,6 @@ function Home() {
                                         
                                     </div>
                                 </div>
-                            </div>
                         )
                     })}
                 </div>
