@@ -28,13 +28,13 @@ export default class Menu extends React.Component {
     if (window.location.pathname === '/') {
       this.setState({displayAboutButton: true, displayLoginButton: true});
     } else
-      if (window.location.pathname === '/About') {
+      if (window.location.pathname === '/about') {
         this.setState({ displayHomeButton: true, displayLoginButton: true });
       } else
-        if (window.location.pathname === '/Login') {
+        if (window.location.pathname === '/login') {
           this.setState({ displayHomeButton: true });
         } else
-          if (window.location.pathname === '/SearchListing') {
+          if (window.location.pathname === 'searchlisting') {
             this.setState({ displayHomeButton: true, displayLogoutButton: true });
           }
   }
@@ -82,12 +82,12 @@ export default class Menu extends React.Component {
                 <img src={HomeIcon} alt="Home Icon" />
                 <h2>Home</h2>
               </NavLink>
-              <NavLink exact to="/About" className={`navLink ${this.state.displayAboutButton ? '' : 'hideLink'}`} activeClassName="AppLinkCurrentPage" >
+              <NavLink exact to="/about" className={`navLink ${this.state.displayAboutButton ? '' : 'hideLink'}`} activeClassName="AppLinkCurrentPage" >
                 <img src={AboutIcon} alt="Sobre Icon" />
                 <h2>Sobre</h2>
               </NavLink>
               <div className="margenEntreAzulRosa"></div>
-              <NavLink exact to="/Login" className={`navLink linkAzul ${this.state.displayLoginButton ? '' : 'hideLink'}`} activeClassName="AppLinkCurrentPage" >
+              <NavLink exact to="/login" className={`navLink linkAzul ${this.state.displayLoginButton ? '' : 'hideLink'}`} activeClassName="AppLinkCurrentPage" >
                 <img src={LoginIcon} alt="Login Icon" />
                 <h2>Login</h2>
               </NavLink>
