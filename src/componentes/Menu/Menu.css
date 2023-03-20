@@ -16,6 +16,10 @@ div.navMenu {
     z-index: 25;
 }
 
+.hide {
+    display: none;
+}
+
 /* Menu transparente*/
 .navMenuWapperHolder {
     height: 5.875rem;
