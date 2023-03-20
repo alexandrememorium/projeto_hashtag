@@ -16,3 +16,13 @@
     margin: auto;
     color: #fff;
 }
+
+@media screen and (min-width: 660px){
+    .rodape{
+        height: 136px;
+    }
+
+    .rodapeTexto {
+        font-size: 20px;
+    }
+}

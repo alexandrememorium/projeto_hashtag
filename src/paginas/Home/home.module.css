@@ -12,6 +12,15 @@ p {
 
 /* Estilo da div header */
 
+.header {
+    height: 520px;
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    background-image: url("../../img/hero-bg-mobile.jpg");
+}
 
 /* Estilo da div body */
 

@@ -5,7 +5,7 @@ import HomeIcon from '../../img/icon-home.svg';
 import AboutIcon from '../../img/icon-info-circle.svg';
 import LoginIcon from '../../img/icon-user-alt.svg';
 import LogoutIcon from '../../img/icon-power-off.svg';
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 import './Menu.css';
 
@@ -21,47 +21,47 @@ export default class Menu extends React.Component {
     getHeaderHeight: null
   }
 
-  componentDidMount() {
+  componentDidMount (){
     this.addTransparencyScrollEvent();
     this.setHeaderHeight();
     window.addEventListener('resize', this.setHeaderHeight);
 
-    if (window.location.pathname === '/') {
-      this.setState({displayAboutButton: true, displayLoginButton: true});
+    if (window.location.pathname === '/'){
+        this.setState({displayAboutButton: true, displayLoginButton: true});
     } else
-      if (window.location.pathname === '/about') {
-        this.setState({ displayHomeButton: true, displayLoginButton: true });
-      } else
-        if (window.location.pathname === '/login') {
-          this.setState({ displayHomeButton: true });
-        } else
-          if (window.location.pathname === 'searchlisting') {
-            this.setState({ displayHomeButton: true, displayLogoutButton: true });
-          }
+    if (window.location.pathname === '/About'){
+        this.setState({displayHomeButton: true, displayLoginButton: true});
+    } else
+    if (window.location.pathname === '/Login'){
+        this.setState({displayHomeButton: true});
+    } else
+    if (window.location.pathname === '/SearchListing'){
+        this.setState({displayHomeButton: true, displayLogoutButton: true});
+    }
   }
 
   setHeaderHeight = () => {
-    const windowWidth = document.documentElement.clientWidth;
+    const windowWidth= document.documentElement.clientWidth;
     const platform = windowWidth >= 660 ? "Desktop" : "Mobile";
 
     // rem value bsed on vw unit
-    let fontSize = (platform === 'Mobile') ? 3.865 : 0.833;
-    fontSize = windowWidth * (fontSize / 100)
+    let fontSize = (platform === 'Mobile' ) ? 3.865 : 0.833 ;
+    fontSize = windowWidth * (fontSize/100)
     // header height in rem unit
-    let headerHeight = (platform === 'Mobile') ? this.props.headerHeightMobile : this.props.headerHeightDesktop;
+    let headerHeight = (platform === 'Mobile' ) ? this.props.headerHeightMobile : this.props.headerHeightDesktop ;
     // responsive header height in px
     headerHeight = headerHeight * fontSize;
 
-    this.setState({ headerHeight });
+    this.setState({headerHeight});
   };
 
-  addTransparencyScrollEvent() {
+  addTransparencyScrollEvent () {
     document.addEventListener('scroll', () => {
       //change state
-      if (document.documentElement.scrollTop >= this.state.headerHeight) {
-        this.setState({ transparencyMenu: true })
+      if(document.documentElement.scrollTop >= this.state.headerHeight){
+        this.setState({transparencyMenu:true})
       } else {
-        this.setState({ transparencyMenu: false })
+        this.setState({transparencyMenu:false})
       };
 
     });
