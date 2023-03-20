@@ -20,6 +20,55 @@ p {
     outline: none;
     box-sizing: border-box;
     background-image: url("../../img/hero-bg-mobile.jpg");
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h1 {
+    text-align: left;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0 10vw;
+}
+
+.header p {
+    text-align: left;
+    font-size: 1rem;
+    margin: 2vh 10vw;
+}
+
+.header input {
+    width: 80%;
+    height: 3rem;
+    border: none;
+    border-radius: 72px;
+    margin-top: 8vh;
+}
+
+@media screen and (min-width: 1024px){
+    .header {
+        height: 660px;
+        background-image: url("../../img/hero-bg.jpg");
+        align-items: flex-start;
+    }
+
+    .header h1 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .header p {
+        font-size: 1.5rem;
+    }
+    .header input {
+        align-self: center;
+        height: 90px;
+        width: 50%;
+        font-size: 2rem;
+    }
 }
 
 /* Estilo da div body */
