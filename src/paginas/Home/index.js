@@ -13,7 +13,7 @@ function Home() {
         <section>
             
             <div className="homeNav">
-                <Menu headerHeightMobile={32.5} headerHeightDesktop={49.25} />
+                <Menu headerHeightMobile={32.5} headerHeightDesktop={49.25}/>
             </div>
 
             <div className={styles.header}>
@@ -52,4 +52,6 @@ function Home() {
         </section>
     )
 }
+
+
 export default Home
