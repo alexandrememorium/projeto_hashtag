@@ -1,6 +1,5 @@
 .swiper {
     height: 270px;
-    overflow: visible;
 }
 
 .swiper-button-next,
@@ -47,7 +46,6 @@
 @media screen and (min-width: 1024px) {
     .swiper {
         height: 350px;
-        overflow: hidden;
         position: unset;
     }
 
