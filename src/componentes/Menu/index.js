@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReactComponent as Logo } from '../../img/logo-white.svg';
+import { ReactComponent as LogoPink } from '../../img/logo-pink.svg';
 import HomeIcon from '../../img/icon-home.svg';
 import AboutIcon from '../../img/icon-info-circle.svg';
 import LoginIcon from '../../img/icon-user-alt.svg';
@@ -75,8 +76,9 @@ export default class Menu extends React.Component {
       <div className="navMenuWapperHolder">
         <div className={"navMenuWapper " + (this.state.transparencyMenu ? 'fixed' : '')}>
           <div className={(this.state.transparencyMenu ? 'transpRolagem' : '')}></div>
-          <div className="navMenu">
-            <Logo className="logoImg" />
+          <div className={"navMenu " + (this.state.transparencyMenu ? 'widthTransp' : '')}>
+            <Logo className={"logoImg " + (this.state.transparencyMenu ? 'hide' : '')} />
+            <LogoPink className={"logoImg " + (this.state.transparencyMenu ? '' : 'hide')} />
             <nav className="appNav">
               <NavLink exact to="/" className={`navLink ${this.state.displayHomeButton ? '' : 'hideLink'}`} activeClassName="AppLinkCurrentPage" >
                 <img src={HomeIcon} alt="Home Icon" />
