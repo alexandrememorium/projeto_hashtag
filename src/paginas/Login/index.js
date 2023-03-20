@@ -7,7 +7,7 @@ export default function Login() {
   return (
     <div className="fundoPag">
       <div className="loginNav">
-        <Menu headerHeightMobile={32.5} headerHeightDesktop={49.25}/>
+        <Menu headerHeightMobile={12.5} headerHeightDesktop={39.25}/>
       </div>      
 
       <div className="loginPageContainer">
