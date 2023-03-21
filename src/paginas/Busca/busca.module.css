@@ -1,13 +1,12 @@
-.containerprincipal {
+
+  
+  .containerprincipal {
     top: -1px;
     left: 0px;
     width: 1920px;
-    height: 1081px;
-    /* UI Properties */
+    height: 1081px;   
     opacity: 1;
   }
-  
- 
   
   .Texto1 {
     /* Layout Properties */
@@ -183,9 +182,9 @@
   }
   
   @media all and (min-width: 320px) and (max-width: 414px) {
-
-    
   
+      
+    
     .container_hashtag {  
       width: 6%;
       height: 104px;
@@ -211,7 +210,27 @@
       color: #0e0b0b;
       opacity: 1;
       margin: 68px 0px 0px 340px;
-    }  
-
-  }
-
+    }
+  
+  
+    .caixa_busca {
+      top: 112px;
+      left: 58px;
+      width: 298px;
+      height: 39px;
+      /* UI Properties */
+      color: var(--unnamed-color-ffffff);
+      text-align: left;
+      font: normal normal bold 33px/24px Rubik;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      opacity: 1;
+      
+    }
+  
+    
+  
+  
+  
+  
+  }    
