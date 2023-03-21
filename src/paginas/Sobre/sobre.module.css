@@ -202,7 +202,7 @@
     .fundo {
       height: 206px;
       background: url(../../img/about-bg.jpg);
-      background-size: 414px 206px;
+      background-size: cover;
       background-repeat: no-repeat;
     }
   
