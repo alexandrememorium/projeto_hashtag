@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
 
         <Switch>
-          <Route path="/" exact={true} component={Busca} />
+          <Route path="/Busca" exact={true} component={App} />
           <Route path="/" exact={true} component={Home}/>
           <Route path="/Login" exact={true} component={Login} />
         </Switch>

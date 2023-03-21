@@ -9,7 +9,6 @@ export default function  App() {
      <div> 
         <Menu/>
      </div>
-
       
       <div className="buscas_realizadas">
         Buscas realizadas
@@ -17,25 +16,22 @@ export default function  App() {
       
       <div className='caixa_busca'>
       
-      <div className='container_hashtag'> 
-        
-        
-        
-        <div className='hashtag'>
-          Hashtag
-        </div>
+        <div className='container_hashtag'>         
+               
+          <div className='hashtag'>
+            Hashtag
+          </div>
 
-        <div className='data'>
-          Data
-        </div>
+          <div className='data'>
+            Data
+          </div>
 
-        <div className='hora'>
-          Hora
-        </div>
-      </div> 
+          <div className='hora'>
+            Hora
+          </div>
+        </div> 
       </div>
-      <div className='mostra_busca'>
-          
+      <div className='mostra_busca'>          
 
       </div>
     </div> 
