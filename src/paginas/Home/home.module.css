@@ -13,7 +13,7 @@ p {
 /* Estilo da div header */
 
 .header {
-    height: 520px;
+    height: 480px;
     font-family: 'Rubik', sans-serif;
     margin: 0;
     padding: 0;
@@ -31,13 +31,13 @@ p {
     text-align: left;
     font-size: 2.2rem;
     font-weight: bold;
-    margin: 0 10vw;
+    margin: 5vh 8vw 0;
 }
 
 .header p {
     text-align: left;
     font-size: 1rem;
-    margin: 2vh 10vw;
+    margin: 2vh 8vw;
 }
 
 .header input {
@@ -57,23 +57,24 @@ p {
     .header {
         height: 660px;
         background-image: url("../../img/hero-bg.jpg");
+        background-size: 100%;
         align-items: flex-start;
     }
 
     .header h1 {
-        font-size: 3rem;
+        font-size: 3em;
         font-weight: bold;
     }
 
     .header p {
-        font-size: 1.5rem;
+        font-size: 1.5em;
     }
 
     .header input {
         align-self: center;
         height: 90px;
         width: 50%;
-        font-size: 2rem;
+        font-size: 2em;
         background-position: 3%;
         background-size: 30px;
         padding-left: 100px;
