@@ -59,10 +59,11 @@ p {
         background-image: url("../../img/hero-bg.jpg");
         background-size: 100%;
         align-items: flex-start;
+        margin-bottom: 240px;
     }
 
     .header h1 {
-        font-size: 3em;
+        font-size: 4em;
         font-weight: bold;
     }
 
@@ -78,6 +79,9 @@ p {
         background-position: 3%;
         background-size: 30px;
         padding-left: 100px;
+        position: absolute;
+        top: 520px;
+        box-shadow: 0px 5px 20px #5538EE14;
     }
 }
 
