@@ -20,6 +20,7 @@ p {
     outline: none;
     box-sizing: border-box;
     background-image: url("../../img/hero-bg-mobile.jpg");
+    background-size: cover;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -57,7 +58,6 @@ p {
     .header {
         height: 660px;
         background-image: url("../../img/hero-bg.jpg");
-        background-size: 100%;
         align-items: flex-start;
         margin-bottom: 240px;
     }
@@ -79,8 +79,9 @@ p {
         background-position: 3%;
         background-size: 30px;
         padding-left: 100px;
+        margin: 0;
         position: absolute;
-        top: 520px;
+        top: 615px;
         box-shadow: 0px 5px 20px #5538EE14;
     }
 }
