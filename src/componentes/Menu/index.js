@@ -84,7 +84,7 @@ export default class Menu extends React.Component {
                 <img src={HomeIcon} alt="Home Icon" />
                 <h2>Home</h2>
               </NavLink>
-              <NavLink exact to="/about" className={`navLink ${this.state.displayAboutButton ? '' : 'hideLink'}`} activeClassName="AppLinkCurrentPage" >
+              <NavLink exact to="/Sobre" className={`navLink ${this.state.displayAboutButton ? '' : 'hideLink'}`} activeClassName="AppLinkCurrentPage" >
                 <img src={AboutIcon} alt="Sobre Icon" />
                 <h2>Sobre</h2>
               </NavLink>
