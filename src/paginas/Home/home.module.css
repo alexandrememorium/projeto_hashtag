@@ -90,6 +90,7 @@ p {
 .body {
     padding: 0px 0px;
     font-size: 16px;
+    padding: 0px 5vw;
 }
 
 .body h2 {
@@ -100,7 +101,6 @@ p {
 }
 
 .carrosselContainer {
-    padding: 0px 5vw;
     position: relative;
 }
 
