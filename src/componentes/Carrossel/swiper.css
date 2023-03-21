@@ -83,12 +83,12 @@
     }
 
     .swiper-button-next {
-        right: 3%;
+        right: -30px;
         transform: rotate(180deg);
     }
 
     .swiper-button-prev {
-        left: 3%;
+        left: -30px;
     }
 
 
