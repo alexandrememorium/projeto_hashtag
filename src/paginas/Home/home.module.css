@@ -41,11 +41,16 @@ p {
 }
 
 .header input {
-    width: 80%;
+    width: 75%;
     height: 3rem;
     border: none;
     border-radius: 72px;
     margin-top: 8vh;
+    padding-left: 35px;
+    background: url("../../img/icon-search.svg") no-repeat left;
+    background-size: 10px;
+    background-position: 5%;
+    background-color: #fff;
 }
 
 @media screen and (min-width: 1024px){
@@ -63,11 +68,15 @@ p {
     .header p {
         font-size: 1.5rem;
     }
+
     .header input {
         align-self: center;
         height: 90px;
         width: 50%;
         font-size: 2rem;
+        background-position: 3%;
+        background-size: 30px;
+        padding-left: 100px;
     }
 }
 
