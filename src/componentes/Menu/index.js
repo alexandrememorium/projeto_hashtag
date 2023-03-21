@@ -29,7 +29,7 @@ export default class Menu extends React.Component {
     if (window.location.pathname === '/') {
       this.setState({displayAboutButton: true, displayLoginButton: true});
     } else
-      if (window.location.pathname === '/about') {
+      if (window.location.pathname === '/Sobre') {
         this.setState({ displayHomeButton: true, displayLoginButton: true });
       } else
         if (window.location.pathname === '/login') {
