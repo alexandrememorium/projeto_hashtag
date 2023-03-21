@@ -58,7 +58,7 @@
 @media screen and (min-width: 1024px) {
     .listaDeUsuarios {
         align-items: start;
-        padding: 125px 10vw;
+        padding: 125px 5vw;
         gap: 3vw;
     }
 

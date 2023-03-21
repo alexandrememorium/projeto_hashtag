@@ -76,7 +76,7 @@ export default class Menu extends React.Component {
       <div className="navMenuWapperHolder">
         <div className={"navMenuWapper " + (this.state.transparencyMenu ? 'fixed' : '')}>
           <div className={(this.state.transparencyMenu ? 'transpRolagem' : '')}></div>
-          <div className={"navMenu " + (this.state.transparencyMenu ? 'widthTransp' : '')}>
+          <div className={"navMenu " + (this.state.transparencyMenu ? 'transpWidth' : '')}>
             <Logo className={"logoImg " + (this.state.transparencyMenu ? 'hide' : '')} />
             <LogoPink className={"logoImg " + (this.state.transparencyMenu ? '' : 'hide')} />
             <nav className="appNav">
