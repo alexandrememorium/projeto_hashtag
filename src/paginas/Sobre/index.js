@@ -3,14 +3,45 @@ import styles from './sobre.module.css'
 
 
 import Figura from "../../img/about-illustration.svg";
-//import IconeGitHub from "../../img/icon-github.svg";
-//import IconeEmail from "../../img/icon-envelope.svg";
-//import IconeLikedIn from "../../img/icon-linkedin.svg";
+import IconeGitHub from "../../img/icon-github.svg";
+import IconeEmail from "../../img/icon-envelope.svg";
+import IconeLikedIn from "../../img/icon-linkedin.svg";
 
 import Rodape from "../../componentes/Rodape/index.js"
 import Menu from "../../componentes/Menu";
 
+const membros = [
+  {
+    nome:"NomeSobrenome",
+    descricao:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat...",
+    foto: "https://img.freepik.com/fotos-gratis/freelancer-feliz-com-tablet-e-laptop-em-uma-cafeteria_342744-942.jpg?w=740&t=st=1679581410~exp=1679582010~hmac=c2ba6c2202d2bc9400336ee78a1e745ee6f4add0a26f5479e7e1fafbf61f222f"
+  },
 
+  {
+    nome:"NomeSobrenome",
+    descricao:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat...",
+    foto: "https://img.freepik.com/fotos-gratis/freelancer-feliz-com-tablet-e-laptop-em-uma-cafeteria_342744-942.jpg?w=740&t=st=1679581410~exp=1679582010~hmac=c2ba6c2202d2bc9400336ee78a1e745ee6f4add0a26f5479e7e1fafbf61f222f"
+  },
+
+  {
+    nome:"NomeSobrenome",
+    descricao:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat...",
+    foto: "https://img.freepik.com/fotos-gratis/freelancer-feliz-com-tablet-e-laptop-em-uma-cafeteria_342744-942.jpg?w=740&t=st=1679581410~exp=1679582010~hmac=c2ba6c2202d2bc9400336ee78a1e745ee6f4add0a26f5479e7e1fafbf61f222f"
+  },
+
+  {
+    nome:"NomeSobrenome",
+    descricao:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat...",
+    foto: "https://img.freepik.com/fotos-gratis/freelancer-feliz-com-tablet-e-laptop-em-uma-cafeteria_342744-942.jpg?w=740&t=st=1679581410~exp=1679582010~hmac=c2ba6c2202d2bc9400336ee78a1e745ee6f4add0a26f5479e7e1fafbf61f222f"
+  },
+
+  {
+    nome:"NomeSobrenome",
+    descricao:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat...",
+    foto: "https://img.freepik.com/fotos-gratis/freelancer-feliz-com-tablet-e-laptop-em-uma-cafeteria_342744-942.jpg?w=740&t=st=1679581410~exp=1679582010~hmac=c2ba6c2202d2bc9400336ee78a1e745ee6f4add0a26f5479e7e1fafbf61f222f"
+  },
+
+];
  
 function Sobre() {
   return ( 
@@ -45,9 +76,67 @@ function Sobre() {
           <h2 className={styles.subtitulo2Texto}>Quem somos</h2>
         </div>
       </section>
-      <div>
-        <Rodape/>
+      
+      <div className={styles.containerGeral}>
+        {membros.map((informacao, id) => (
+          <div className={styles.container} key={id}>
+            <div className={styles.containerMembros}>
+              <div className={styles.containerCartaoMembros}>
+                <img
+                  className={styles.membroFoto}
+                  src={informacao.foto}
+                  alt=' '
+                />
+                <div className={styles.informacaoMembros}>
+                  <h3 className={styles.informacaoMembrosTitulo}>
+                    {informacao.nome}
+                  </h3>
+                  <p className={styles.informacaoMembrosTexto}>
+                    {informacao.descricao}
+                  </p>
+                </div>
+                <div className={styles.containerIcones}>
+                  <a
+                    href="/"
+                    target='_blank'
+                    rel='noreferrer'>
+                    <img
+                      src={IconeGitHub}
+                      alt='icone'
+                      className={styles.icones}
+                      title='Github'
+                    />
+                  </a>
+                  <a
+                    href="/"
+                    target='_blank'
+                    rel='noreferrer'>
+                    <img
+                      src={IconeEmail}
+                      alt='icone'
+                      className={styles.icones}
+                      title='Email'
+                    />
+                  </a>
+                  <a
+                    href="/"
+                    target='_blank'
+                    rel='noreferrer'>
+                    <img
+                      src={IconeLikedIn}
+                      alt='icone'
+                      className={styles.icones}
+                      title='LinkedIn'
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
+        <Rodape/>
+      
     </div>
    );
 }
