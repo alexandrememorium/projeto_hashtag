@@ -35,7 +35,7 @@ export default class Menu extends React.Component {
         if (window.location.pathname === '/login') {
           this.setState({ displayHomeButton: true });
         } else
-          if (window.location.pathname === 'searchlisting') {
+          if (window.location.pathname === '/busca') {
             this.setState({ displayHomeButton: true, displayLogoutButton: true });
           }
   }

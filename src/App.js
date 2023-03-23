@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Home from './paginas/Home/index.js';
-//import Busca from './paginas/Busca/index.js';
+import Busca from './paginas/Busca/index.js';
 //paginas
 import Login from './paginas/Login/index.js';
 import Sobre from "./paginas/Sobre/index.js";
