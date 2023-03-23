@@ -1,11 +1,13 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Home from './paginas/Home/index.js';
-//import Busca from './paginas/Busca/index.js';
+import Busca from './paginas/Busca/index.js';
+
 //paginas
+import Home from './paginas/Home/index.js';
 import Login from './paginas/Login/index.js';
 import Sobre from "./paginas/Sobre/index.js";
-
+import Busca from './paginas/Busca/index.js';
 
 function App() {
   return (
@@ -13,7 +15,7 @@ function App() {
       <BrowserRouter>
 
         <Switch>
-          <Route path="/Busca" exact={true} component={App} />
+          <Route path="/Busca" exact={true} component={Busca} />
           <Route path="/" exact={true} component={Home}/>
           <Route path="/Login" exact={true} component={Login} />
           <Route path="/Sobre" exact={true} component={Sobre} />

@@ -1,98 +1,96 @@
-.containerprincipal {
+.fundoPag * {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.fundoPag .loginNav {
+  width: 100%;
+}
+
+.fundoPag button {
+  cursor: pointer;
+  background: #3633F7;
+  color: #fff;
+  padding: 0.688rem;
+  border-radius: 2.125rem;
+  width: 12.813rem;
+  height: 3.5rem;
+  margin-top: 1.25rem;
+  transition: all 300ms;
+  margin-top: 2.813rem;
+  border: none;
+  font-size: 1.188rem;
+  font-weight: bold;
+}
+
+.fundoPag button:hover {
+  background: rgb(190, 5, 246);
+}
+
+.fundoPag {
+  background-image: url("../../img/login-bg.jpg");
+  background-image: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fundoPag .loginPageContainer {
+  width: 33.313rem;
+  height: 38rem;
+  border-radius: 0.875rem;
+  margin-top: 6.8rem;
+  margin-right: 0.9rem;
+  box-shadow: 0 0 0.625rem rgb(0 0 0 / 20%);
+  background: #fff;
+  color: rgb(99, 12, 212);
+}  
+  
+  .containerprincipal {
     top: -1px;
     left: 0px;
     width: 1920px;
-    height: 1081px;
-    /* UI Properties */
+    height: 1081px;   
     opacity: 1;
-  }
+  } 
   
- 
-  
-  .Texto1 {
-    /* Layout Properties */
-    top: 0px;
-    left: 0px;
-    width: 133px;
-    height: 42px;
-    /* UI Properties */
-    color: var(--unnamed-color-ffffff);
-    text-align: left;
-    font: normal normal normal 35px/27px Rubik;
-    letter-spacing: 1px;
-    color: #131212;
-  }
-  
-  .Texto2 {
-    /* Layout Properties */
-    top: 0px;
-    left: 133px;
-    width: 125%;
-    height: 42px;
-    /* UI Properties */
-    color: var(--unnamed-color-ffffff);
-    text-align: left;
-    font: normal normal bold 35px/27px Rubik;
-    letter-spacing: 0px;
-    color: #201212;
-  }
+
   
   .Apptop {
     top: 36px;
     left: 64px;
     width: 93%;
     height: 49px;
-    /* UI Properties */
+    
     opacity: 1;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
     margin: 40px 0px 55px 64px;
-  }
+  }  
   
   
-  .botaohome {
-    border-radius: 25px;
-    top: 36px;
-    left: 1484px;
-    width: 170px;
-    height: 49px;
-    background: var(--unnamed-color-d842bd) 0% 0% no-repeat padding-box;
-    background: #D842BD 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #5538EE29;
-    border-radius: 25px;
-    opacity: 1;
-  }
-  
-  .botaosair {
-    border-radius: 25px;
-    top: 36px;
-    left: 1689px;
-    width: 170px;
-    height: 49px;
-    background: var(--unnamed-color-3633f7) 0% 0% no-repeat padding-box;
-    background: #3633F7 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #5538EE29;
-    opacity: 1; 
-    margin-left: 25px;
-  }
   
   .buscas_realizadas {
     
-    /* Layout Properties */
     top: 150px;
     left: 184px;
-    width: 361px;
+    width: 81%;
     height: 47px;
-    /* UI Properties */
+
     color: var(--unnamed-color-ffffff);
     text-align: left;
     font: normal normal bold 40px/44px Rubik;
     letter-spacing: 0px;
-    color: #0e0b0b;
+    color: #FFFFFF;
     opacity: 1;
-    margin: 68px 0px 0px 187px;
    
   }
   
@@ -107,22 +105,23 @@
     margin: auto;
     display: flex;
     align-items: flex-end;
-    margin-top: 40px;
+    
   }
   
   
   .caixa_busca {
-    /* Layout Properties */
+    
     top: 237px;
-    left: 184px;
-    width: 1553px;
+    left: 81%;
+    width: 81%;
     height: 758px;
-    /* UI Properties */
+    
     background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
     background: #fafaf4 0% 0% no-repeat padding-box;
     border-radius: 14px;
     opacity: 1;
     margin: auto;
+    margin-top: 40px;
   }
   
   .hashtag {  
@@ -183,35 +182,119 @@
   }
   
   @media all and (min-width: 320px) and (max-width: 414px) {
-
-    
   
+    .Apptop  {
+
+      top: 0px;
+      left: 0px;
+      width: 414px;
+      height:39px;
+      /* UI Properties */
+      opacity: 1;
+
+
+    }
+
+    .fundoPag {
+      background-image: url("../../img/login-bg.jpg");
+      background-image: no-repeat;
+      background-size: cover;
+      /*height: 232vh;*/
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+
+    .busca_fundoPag__bgOlG {
+      background-image: url(http://localhost:3000/static/media/login-bg.f2411a5….jpg);
+      background-image: no-repeat;
+      background-size: cover;
+      /*height: 413;*/
+      width: 1117px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+  }
+    
     .container_hashtag {  
-      width: 6%;
-      height: 104px;
+      width: 99%;
+      /*height: 49px;*/
       background: #F1F1F1 0% 0% no-repeat padding-box;
       border-radius: 14px;
-      opacity: 1;
-      /* margin: auto; */
+      opacity: 1;     
       display: flex;
       align-items: flex-end;
-      margin-top: 40px;
+      
     }
   
   
     .buscas_realizadas {
-      top: 150px;
-      left: 184px;
-      width: 361%;
-      height: 47px;
+      top: 112px;
+      left: 58px;
+      width: 61%;
+      height: 39px;
       color: var(--unnamed-color-ffffff);
       text-align: left;
-      font: normal normal bold 40px/44px Rubik;
+      font: normal normal bold 33px/24px Rubik;
       letter-spacing: 0px;
-      color: #0e0b0b;
+      color: #FFFFFF;
       opacity: 1;
-      margin: 68px 0px 0px 340px;
+    }
+  
+  
+    .caixa_busca {
+      top: 112px;
+      left: 58px;
+      width: 96%;    
+      color: var(--unnamed-color-ffffff);
+      text-align: left;
+      font: normal normal bold 17px/24px Rubik;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      opacity: 1;
+      
+    }
+  
+    .hashtag {  
+      top: 218px;
+      left: 29px;
+      width: 80%;
+      height: 38px;
+      color: var(--unnamed-color-3633f7);
+      text-align: left;
+      letter-spacing: NaNpx;
+      color: #3633F7;
+      opacity: 1;
+      margin-left: 25px;
     }  
+  
+    .data {
+      top: 218px;
+      left: 253px;
+      width: 30%;
+      height: 38px;
+      color: var(--unnamed-color-3633f7);
+      text-align: left;
+      font: normal normal medium 17px/20px Rubik;
+      letter-spacing: 0px;
+      color: #3633F7;
+      opacity: 1;
 
-  }
-
+    }
+    
+    .hora {      
+      top: 293px;
+      left: 1554px;
+      width: 19%;
+      height: 39px;
+      color: var(--unnamed-color-3633f7);
+      text-align: left;
+      letter-spacing: NaNpx;
+      color: #3633F7;
+      opacity: 1;
+    }
+  
+  
+  }    
