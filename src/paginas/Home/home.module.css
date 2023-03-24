@@ -13,13 +13,97 @@ p {
 /* Estilo da div header */
 
 .header {
-    height: 520px;
+    height: 480px;
     font-family: 'Rubik', sans-serif;
     margin: 0;
     padding: 0;
     outline: none;
     box-sizing: border-box;
     background-image: url("../../img/hero-bg-mobile.jpg");
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h1 {
+    text-align: left;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 5vh 8vw 0;
+}
+
+.header p {
+    text-align: left;
+    font-size: 1rem;
+    margin: 2vh 8vw;
+}
+
+.header input {
+    width: 75%;
+    height: 3rem;
+    border: none;
+    border-radius: 72px;
+    margin-top: 8vh;
+    padding-left: 35px;
+    background: url("../../img/icon-search.svg") no-repeat left;
+    background-size: 10px;
+    background-position: 5%;
+    background-color: #fff;
+}
+
+@media screen and (min-width: 481px){
+    .header {
+        height: 520px;
+        background-image: url("../../img/hero-bg.jpg");
+        align-items: flex-start;
+        margin-bottom: 120px;
+    }
+
+    .header h1 {
+        font-size: 8em;
+    }
+
+    .header p {
+        font-size: 4em;
+    }
+
+    .header input {
+        align-self: center;
+        height: 90px;
+        width: 50%;
+        font-size: 5em;
+        background-position: 3%;
+        background-size: 30px;
+        padding-left: 60px;
+        margin: 0;
+        position: absolute;
+        top: 475px;
+        box-shadow: 0px 5px 20px #5538EE14;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .header {
+        height: 660px;
+        margin-bottom: 240px;
+    }
+
+    .header h1 {
+        font-size: 4em;
+    }
+
+    .header p {
+        font-size: 1.5em;
+    }
+
+    .header input {
+        top: 615px;
+        font-size: 2em;
+        padding-left: 100px;
+    }
 }
 
 /* Estilo da div body */
@@ -27,6 +111,7 @@ p {
 .body {
     padding: 0px 0px;
     font-size: 16px;
+    padding: 0px 5vw;
 }
 
 .body h2 {
@@ -37,7 +122,6 @@ p {
 }
 
 .carrosselContainer {
-    padding: 0px 5vw;
     position: relative;
 }
 

@@ -15,7 +15,7 @@ export default class Menu extends React.Component {
     displayHomeButton: false,
     displayAboutButton: false,
     displayLoginButton: false,
-    displayLogoutButton: true,
+    displayLogoutButton: false,
 
     transparencyMenu: false,
     getHeaderHeight: null
@@ -29,13 +29,13 @@ export default class Menu extends React.Component {
     if (window.location.pathname === '/') {
       this.setState({displayAboutButton: true, displayLoginButton: true});
     } else
-      if (window.location.pathname === '/About') {
+      if (window.location.pathname === '/Sobre') {
         this.setState({ displayHomeButton: true, displayLoginButton: true });
       } else
         if (window.location.pathname === '/Login') {
           this.setState({ displayHomeButton: true });
         } else
-          if (window.location.pathname === '/SearchListing') {
+          if (window.location.pathname === '/Busca') {
             this.setState({ displayHomeButton: true, displayLogoutButton: true });
           }
   }
@@ -68,7 +68,7 @@ export default class Menu extends React.Component {
   };
 
   logout = () => {
-    localStorage.removeItem('logged');
+    localStorage.removeItem('logado');
   }
 
   render() {
@@ -76,14 +76,15 @@ export default class Menu extends React.Component {
       <div className="navMenuWapperHolder">
         <div className={"navMenuWapper " + (this.state.transparencyMenu ? 'fixed' : '')}>
           <div className={(this.state.transparencyMenu ? 'transpRolagem' : '')}></div>
-          <div className="navMenu">
-            {this.state.transparencyMenu ? <LogoPink className="logo-img" /> : <Logo className="logo-img" /> }
+          <div className={"navMenu " + (this.state.transparencyMenu ? 'transpWidth' : '')}>
+            <Logo className={"logoImg " + (this.state.transparencyMenu ? 'hide' : '')} />
+            <LogoPink className={"logoImg " + (this.state.transparencyMenu ? '' : 'hide')} />
             <nav className="appNav">
               <NavLink exact to="/" className={`navLink ${this.state.displayHomeButton ? '' : 'hideLink'}`} activeClassName="AppLinkCurrentPage" >
                 <img src={HomeIcon} alt="Home Icon" />
                 <h2>Home</h2>
               </NavLink>
-              <NavLink exact to="/About" className={`navLink ${this.state.displayAboutButton ? '' : 'hideLink'}`} activeClassName="AppLinkCurrentPage" >
+              <NavLink exact to="/Sobre" className={`navLink ${this.state.displayAboutButton ? '' : 'hideLink'}`} activeClassName="AppLinkCurrentPage" >
                 <img src={AboutIcon} alt="Sobre Icon" />
                 <h2>Sobre</h2>
               </NavLink>
