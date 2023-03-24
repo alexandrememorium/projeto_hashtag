@@ -8,14 +8,27 @@ div.navMenu {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    /*width: 100%;*/
     padding: 2rem 1rem;
     z-index: 25;
+}
+
+.navMenuWapperHolder {
+    position: absolute;
+}
+
+.hide {
+    display: none;
+}
+
+.transpWidth {
+    width: 100%;
 }
 
 /* Menu transparente*/
 .navMenuWapperHolder {
     height: 5.875rem;
+    width: 100%;
 }
 
 div.navMenuWapper.fixed {
@@ -28,6 +41,7 @@ div.navMenuWapper.fixed {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 div.navMenuWapper div.transpRolagem {
@@ -103,7 +117,7 @@ nav.appNav .navLink img {
     margin-right: 0.488rem;
 }
 
-@media screen and (min-width: 660px){
+@media screen and (min-width: 481px){
     html {
         font-size: 0.833vw; /*com base na proporção de 16px para o tamanho da tela de layout especificado de 1920, isso mudará o valor padrão da unidade rem da sua página*/
     }

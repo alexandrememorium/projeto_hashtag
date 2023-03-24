@@ -1,0 +1,300 @@
+.fundoPag * {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.fundoPag .loginNav {
+  width: 100%;
+}
+
+.fundoPag button {
+  cursor: pointer;
+  background: #3633F7;
+  color: #fff;
+  padding: 0.688rem;
+  border-radius: 2.125rem;
+  width: 12.813rem;
+  height: 3.5rem;
+  margin-top: 1.25rem;
+  transition: all 300ms;
+  margin-top: 2.813rem;
+  border: none;
+  font-size: 1.188rem;
+  font-weight: bold;
+}
+
+.fundoPag button:hover {
+  background: rgb(190, 5, 246);
+}
+
+.fundoPag {
+  background-image: url("../../img/login-bg.jpg");
+  background-image: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fundoPag .loginPageContainer {
+  width: 33.313rem;
+  height: 38rem;
+  border-radius: 0.875rem;
+  margin-top: 6.8rem;
+  margin-right: 0.9rem;
+  box-shadow: 0 0 0.625rem rgb(0 0 0 / 20%);
+  background: #fff;
+  color: rgb(99, 12, 212);
+}  
+  
+  .containerprincipal {
+    top: -1px;
+    left: 0px;
+    width: 1920px;
+    height: 1081px;   
+    opacity: 1;
+  } 
+  
+
+  
+  .Apptop {
+    top: 36px;
+    left: 64px;
+    width: 93%;
+    height: 49px;
+    
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 40px 0px 55px 64px;
+  }  
+  
+  
+  
+  .buscas_realizadas {
+    
+    top: 150px;
+    left: 184px;
+    width: 81%;
+    height: 47px;
+
+    color: var(--unnamed-color-ffffff);
+    text-align: left;
+    font: normal normal bold 40px/44px Rubik;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+   
+  }
+  
+  .container_hashtag {
+    top: 237px;
+    left: 184px;
+    width: 100%;
+    height: 106px;
+    background: #F1F1F1 0% 0% no-repeat padding-box;
+    border-radius: 14px;
+    opacity: 1;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    
+  }
+  
+  
+  .caixa_busca {
+    
+    top: 237px;
+    left: 81%;
+    width: 81%;
+    height: 758px;
+    
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    background: #fafaf4 0% 0% no-repeat padding-box;
+    border-radius: 14px;
+    opacity: 1;
+    margin: auto;
+    margin-top: 40px;
+  }
+  
+  .hashtag {  
+    /* Layout Properties */
+    top: 293px;
+    left: 247px;
+    width: 74%;
+    height: 28px;
+    /* UI Properties */
+    color: var(--unnamed-color-3633f7);
+    text-align: left;
+    letter-spacing: NaNpx;
+    color: #3633F7;
+    opacity: 1; 
+    margin-left: 63px;
+   
+  }
+  
+  .data {
+    /* Layout Properties */
+    top: 293px;
+    left: 13%;
+    width: 10%;
+    height: 28px;
+    /* UI Properties */
+    color: var(--unnamed-color-3633f7);
+    text-align: left;
+    letter-spacing: NaNpx;
+    color: #3633F7;
+    opacity: 1
+   
+  }
+  
+  .hora {
+    /* Layout Properties */
+    top: 293px;
+    left: 1554px;
+    width: 55px;
+    height: 28px;
+    /* UI Properties */
+    color: var(--unnamed-color-3633f7);
+    text-align: left;
+    letter-spacing: NaNpx;
+    color: #3633F7;
+    opacity: 1;
+  }
+  
+  
+  .mostra_busca    {
+    /* Layout Properties */
+    top: 366px;
+    left: 208px;
+    width: 1506px;
+    height: 584px;
+    /* UI Properties */
+    opacity: 1;
+  
+  }
+  
+  @media all and (min-width: 320px) and (max-width: 414px) {
+  
+    .Apptop  {
+
+      top: 0px;
+      left: 0px;
+      width: 414px;
+      height:39px;
+      /* UI Properties */
+      opacity: 1;
+
+
+    }
+
+    .fundoPag {
+      background-image: url("../../img/login-bg.jpg");
+      background-image: no-repeat;
+      background-size: cover;
+      /*height: 232vh;*/
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+
+    .busca_fundoPag__bgOlG {
+      background-image: url(http://localhost:3000/static/media/login-bg.f2411a5….jpg);
+      background-image: no-repeat;
+      background-size: cover;
+      /*height: 413;*/
+      width: 1117px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+  }
+    
+    .container_hashtag {  
+      width: 99%;
+      /*height: 49px;*/
+      background: #F1F1F1 0% 0% no-repeat padding-box;
+      border-radius: 14px;
+      opacity: 1;     
+      display: flex;
+      align-items: flex-end;
+      
+    }
+  
+  
+    .buscas_realizadas {
+      top: 112px;
+      left: 58px;
+      width: 61%;
+      height: 39px;
+      color: var(--unnamed-color-ffffff);
+      text-align: left;
+      font: normal normal bold 33px/24px Rubik;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      opacity: 1;
+    }
+  
+  
+    .caixa_busca {
+      top: 112px;
+      left: 58px;
+      width: 96%;    
+      color: var(--unnamed-color-ffffff);
+      text-align: left;
+      font: normal normal bold 17px/24px Rubik;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      opacity: 1;
+      
+    }
+  
+    .hashtag {  
+      top: 218px;
+      left: 29px;
+      width: 80%;
+      height: 38px;
+      color: var(--unnamed-color-3633f7);
+      text-align: left;
+      letter-spacing: NaNpx;
+      color: #3633F7;
+      opacity: 1;
+      margin-left: 25px;
+    }  
+  
+    .data {
+      top: 218px;
+      left: 253px;
+      width: 30%;
+      height: 38px;
+      color: var(--unnamed-color-3633f7);
+      text-align: left;
+      font: normal normal medium 17px/20px Rubik;
+      letter-spacing: 0px;
+      color: #3633F7;
+      opacity: 1;
+
+    }
+    
+    .hora {      
+      top: 293px;
+      left: 1554px;
+      width: 19%;
+      height: 39px;
+      color: var(--unnamed-color-3633f7);
+      text-align: left;
+      letter-spacing: NaNpx;
+      color: #3633F7;
+      opacity: 1;
+    }
+  
+  
+  }    

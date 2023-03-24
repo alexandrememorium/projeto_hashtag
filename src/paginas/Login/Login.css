@@ -41,7 +41,7 @@
   flex-direction: column;
 }
 
-.fundoPag .loginPageContainer {
+.fundoPag .paginaLogin {
   width: 33.313rem;
   height: 38rem;
   border-radius: 0.875rem;
@@ -52,14 +52,14 @@
   color: rgb(99, 12, 212);
 }
 
-.loginPageContainer form {
+.paginaLogin form {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 4.125rem;
 }
 
-.loginPageContainer form input {
+.paginaLogin form input {
   height: 2.5rem;
   font-size: 1.3rem;
   border-top: none;
@@ -70,11 +70,11 @@
   margin-top: 1.563rem;
 }
 
-.loginPageContainer form label {
+.paginaLogin form label {
   margin-bottom: 1.25rem;
 }
 
-.loginPageContainer form h1 {
+.paginaLogin form h1 {
   color: #3634F7;
   margin-top: 4.125rem;
   margin-bottom: 2.438rem;
@@ -83,31 +83,31 @@
 /* responsivo - media query */
 
 @media all and (min-width: 320px) and (max-width: 414px) {
-  .fundoPag .loginPageContainer {
+  .fundoPag .paginaLogin {
     width: 21.25rem;
     height: 28.75rem;
   }
 
-  .loginPageContainer form input {
+  .paginaLogin form input {
     width: 20rem;
   }
 
-  .loginPageContainer form h1 {
+  .paginaLogin form h1 {
     margin-top: 0.125rem;
   }
 }
 
 @media all and (min-width: 415px) and (max-width: 768px) {
-  .fundoPag .loginPageContainer {
+  .fundoPag .paginaLogin {
     width: 22.313rem;
     height: 29rem;
   }
 
-  .loginPageContainer form input {
+  .paginaLogin form input {
     width: 19.553rem;
   }
 
-  .loginPageContainer form {
+  .paginaLogin form {
     margin-top: 0;
   }
 }
