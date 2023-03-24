@@ -12,7 +12,6 @@ function Carrossel({itens}) {
             spaceBetween={15}
             slidesPerView={2}
             pagination={{
-                
                 dynamicBullets: true,
                 dynamicMainBullets: 2
             }}

@@ -41,57 +41,6 @@ p {
     position: relative;
 }
 
-.listaDeUsuarios {
-    display: grid;
-    justify-content: center;
-    gap: 5vw;
-    padding: 25px 5vw; 
-}
-
-.itemContent {
-    border: 1px solid #5538EE24;
-    border-radius: 5px;
-    box-shadow: 0px 5px 10px #5538EE14;
-    padding: 30px 15px 20px 36px;
-    display: grid;
-    gap: 15px;
-    grid-template-columns: auto 1fr;
-}
-
-.itemContent img {
-    border-radius: 30px;
-    height: 54px;
-    width: 54px;
-}
-
-.usuarioInfo div {
-    align-items: center;
-    color: #292929;
-    display: flex;
-    flex-wrap: wrap;
-    font-size: .8em;
-    column-gap: 10px;
-}
-
-.usuarioInfo div p {
-    color: #292929;
-    font-size: .7em;
-    opacity: 43%;
-}
-
-.usuarioInfo > p {
-    color: #292929;
-    font-size: .7em;
-    margin-bottom: 10px;
-}
-
-.usuarioInfo a {
-    color: #3634F7;
-    font-size: .6em;
-    font-weight: bold;
-    text-decoration: none;
-}
-
 @media screen and (min-width: 768px) {
 
     .body {
@@ -101,11 +50,6 @@ p {
     .body h2 {
         margin: 54px 0px 75px 0px;
     }
-
-    .listaDeUsuarios {
-        grid-template-columns: 50% 50%;
-    }
-
 }
 
 @media screen and (min-width: 1024px){
@@ -116,20 +60,4 @@ p {
     .body h2 {
         margin: 54px 0px 125px 0px;
     }
-
-    .listaDeUsuarios {
-        align-items: start;
-        padding: 125px 10vw;
-        gap: 3vw;
-    }
-
-    .itemContent:nth-child(2n) {
-        padding: 20px 15px 15px 35px;
-        align-self: center;
-    }
-
-    .itemContent:nth-child(3n + 2) {
-        align-self: start;
-    }
-
 }
