@@ -43,11 +43,32 @@ const membros = [
 
 ];
  
-function Sobre() {
-  return ( 
+//function Sobre() {
+export default class Sobre extends React.Component {
+
+  state = {
+      textoSobre:""
+   }
+
+   componentDidMount(){
+    this.getTabelaSobre()
+  }
+  
+  getTabelaSobre(){
+    fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/Projeto?maxRecords=1&view=Grid%20view&api_key=keykXHtsEPprqdSBF&filterByFormula=Find(%2203-23%22%2C+Squad)", {
+    })
+    .then(response => response.json())
+    .then(responseJson => {
+        this.setState({textoSobre:responseJson.records[0].fields.Sobre})
+    })
+  }
+  
+  render() {   
+
+    return ( 
     <div className={styles.sobre}>
       <header className={styles.fundo}>
-        <Menu headerHeightMobile={12.875} headerHeightDesktop={26.3643}/>
+        <Menu  headerHeightMobile={12.875} headerHeightDesktop={26.3643}/>
         <div className={styles.titulo}>
           <h1 className={styles.tituloTexto}>Sobre o projeto</h1>
         </div>
@@ -59,7 +80,7 @@ function Sobre() {
 
             <div className={styles.blocoParagrafo}>
               <p className={styles.blocoParagrafoTexto}>
-                Este é um projeto proposto pela NewTab Academy de desenvolvimento em equipe de uma página web responsiva para visualização de mensagens e imagens com integração com a API do Twitter. Foi desenvolvido de maneira incremental utilizando o conhecimento dos módulos HTML, CSS, Javascript e React. Foram disponibilizados 2 layouts para serem escolhidos e seguidos pelos membros do grupo, reuniões para decisões e colaborações gerais.
+                {this.state.textoSobre}
               </p>
             </div>
           </div>
@@ -140,5 +161,5 @@ function Sobre() {
     </div>
    );
 }
-
-export default Sobre;
+}
+//export default Sobre;
