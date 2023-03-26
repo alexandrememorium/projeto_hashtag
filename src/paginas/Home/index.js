@@ -10,7 +10,7 @@ import useFetch from '../../componentes/TwitterAPI/index.js'
 function Home() {
 
     //busca
-    const [itemBusca, setItemBusca] = useState('');
+    const [itemBusca, setItemBusca] = useState('coragem');
     /*console.log(itemBusca)*/
 
     var myHeaders = new Headers();
@@ -22,8 +22,8 @@ function Home() {
             {
                 "fields": {
                     "Squad": "03-23",
-                    "Hashtag": {itemBusca},
-                    "Data": 123123
+                    "Hashtag": itemBusca,
+                    "Data": 1668275903874
                 }
             }
         ]
@@ -32,12 +32,10 @@ function Home() {
     function handleKeyPress(e) {
         var key = e.key;
         if (key === "Enter") {
-            /*console.log('você apertou enter')*/
-            fetch('https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?view=Grid%20view&api_key=keykXHtsEPprqdSBF&filterByFormula=Find(%2203-23%22%2C+Squad)', {
+            fetch('https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?maxRecords=3&view=Grid%20view', {
                 method: 'POST',
                 headers: myHeaders,
                 body: raw,
-                redirect: 'follow'
             })
         }
     }
@@ -45,9 +43,9 @@ function Home() {
     //twitter
     const itens = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     
-    const texto = 'natureza'
+    // const texto = 'natureza'
 
-    const { isLoading, value } = useFetch(texto)
+    const { isLoading, value } = useFetch(itemBusca)
 
     return (
         <section>
@@ -65,8 +63,8 @@ function Home() {
                     placeholder={'Buscar...'}
                     onChange={itemBusca => setItemBusca(itemBusca.target.value)}
                     value={itemBusca}
-                    onKeyPress={(e) => handleKeyPress(e)}
-                    requiredname={'Busca'} 
+                    onKeyDown={(e) => handleKeyPress(e)}
+                    required
                 ></input>
             </div>
 
