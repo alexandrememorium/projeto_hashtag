@@ -32,7 +32,7 @@ function Home() {
     function handleKeyPress(e) {
         var key = e.key;
         if (key === "Enter") {
-            console.log('você apertou enter')
+            /*console.log('você apertou enter')*/
             fetch('https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?view=Grid%20view&api_key=keykXHtsEPprqdSBF&filterByFormula=Find(%2203-23%22%2C+Squad)', {
                 method: 'POST',
                 headers: myHeaders,

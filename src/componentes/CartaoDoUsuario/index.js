@@ -2,8 +2,6 @@ import React from 'react'
 import styles from './cartao.module.css'
 
 function Cartao({ itens }) {
-
-    console.log(itens)
     
     return (
         <div className={styles.listaDeUsuarios}>
