@@ -1,19 +1,24 @@
 import React from 'react'
 import styles from './cartao.module.css'
 
-function Cartao({itens}) {
+function Cartao({ itens }) {
+
+    console.log(itens)
+    
     return (
         <div className={styles.listaDeUsuarios}>
-            {itens.map((_, index) => {
+
+            {itens.data.map((_, index) => {
                 return (
                     <div className={styles.itemContent} key={index}>
-                        <img src={`https://i.pravatar.cc/150?img=${index}`} alt="Imagem do Perfil" />
+                        <img src={itens.includes.users[index].profile_image_url
+                        } alt="Imagem do Perfil" />
                         <div className={styles.usuarioInfo}>
                             <div>
-                                <h3>UserName</h3>
-                                <p>@twitterusername</p>
+                                <h3>{itens.includes.users[index].name}</h3>
+                                <p>{`@${itens.includes.users[index].username}`}</p>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat...</p>
+                            <p>{itens.data[index].text}</p>
                             <a href="http://www.twitter.com">Ver mais no Twitter</a>
 
                         </div>
