@@ -5,15 +5,10 @@ import Menu from '../../componentes/Menu/';
 import styles from './home.module.css';
 import Rodape from '../../componentes/Rodape'
 import Cartao from '../../componentes/CartaoDoUsuario';
-import useFetch from '../../componentes/TwitterAPI/index.js'
 
 function Home() {
 
     const itens = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    
-    const texto = 'natureza'
-
-    const { isLoading, value } = useFetch(texto)
 
     return (
         <section>
@@ -35,7 +30,7 @@ function Home() {
                     <Carrossel itens={itens}/>
                 </div>
 
-                {isLoading === false ? <Cartao itens={value} /> : ''}
+                <Cartao itens={itens}/>
 
             </div>
             <Rodape />
