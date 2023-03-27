@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/projeto_hashtag/static/css/main.37de5b54.css",
+    "main.js": "/projeto_hashtag/static/js/main.a6d855d2.js",
+    "static/media/hero-bg.jpg": "/projeto_hashtag/static/media/hero-bg.bb884368f088f73ec617.jpg",
+    "static/media/login-bg.jpg": "/projeto_hashtag/static/media/login-bg.f2411a575614d48f2c00.jpg",
+    "static/media/about-bg.jpg": "/projeto_hashtag/static/media/about-bg.27d21cb16cc30bf98cae.jpg",
+    "static/media/hero-bg-mobile.jpg": "/projeto_hashtag/static/media/hero-bg-mobile.752f34a4afb70b0093d4.jpg",
+    "static/media/about-illustration.svg": "/projeto_hashtag/static/media/about-illustration.b1365d3486dbe54ac3a416aa79d2ddb5.svg",
+    "static/media/icon-github.svg": "/projeto_hashtag/static/media/icon-github.9939c646523095eb12f77d887117c2f4.svg",
+    "static/media/icon-envelope.svg": "/projeto_hashtag/static/media/icon-envelope.552d69e3f10e31a2a2bbaa66ecc58118.svg",
+    "static/media/icon-home.svg": "/projeto_hashtag/static/media/icon-home.c39cad5ebf08919c27f876b02150f5f7.svg",
+    "index.html": "/projeto_hashtag/index.html",
+    "static/media/icon-search.svg": "/projeto_hashtag/static/media/icon-search.57ca223137c119f8f5b6.svg",
+    "static/media/icon-linkedin.svg": "/projeto_hashtag/static/media/icon-linkedin.c0c953a63a2a304bf3c91102582b654c.svg",
+    "static/media/icon-info-circle.svg": "/projeto_hashtag/static/media/icon-info-circle.04710de8deaa23644f205effc16f384a.svg",
+    "static/media/icon-power-off.svg": "/projeto_hashtag/static/media/icon-power-off.82d053be5fde578d148deb506cffe4eb.svg",
+    "static/media/icon-arrow-right.svg": "/projeto_hashtag/static/media/icon-arrow-right.58ea952ae9becaf1e877.svg",
+    "static/media/icon-arrow-left.svg": "/projeto_hashtag/static/media/icon-arrow-left.a6627ccafc4a5362baf5.svg",
+    "static/media/icon-user-alt.svg": "/projeto_hashtag/static/media/icon-user-alt.525f1ff18ffe31aca4fdf0c343a0ff58.svg",
+    "static/media/logo-pink.svg": "/projeto_hashtag/static/media/logo-pink.96503fc829d721f1f5c884f25ef79a5b.svg",
+    "static/media/logo-white.svg": "/projeto_hashtag/static/media/logo-white.fd3cc60564945da5a4170ad02dc50327.svg",
+    "main.37de5b54.css.map": "/projeto_hashtag/static/css/main.37de5b54.css.map",
+    "main.a6d855d2.js.map": "/projeto_hashtag/static/js/main.a6d855d2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37de5b54.css",
+    "static/js/main.a6d855d2.js"
+  ]
+}
