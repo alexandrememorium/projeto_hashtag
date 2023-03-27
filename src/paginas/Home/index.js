@@ -6,11 +6,12 @@ import styles from './home.module.css';
 import Rodape from '../../componentes/Rodape'
 import Cartao from '../../componentes/CartaoDoUsuario';
 import useFetch from '../../componentes/TwitterAPI/index.js'
+import { toast } from 'react-toastify';
 
 function Home() {
 
     //busca
-    const [itemBusca, setItemBusca] = useState('coragem');
+    const [itemBusca, setItemBusca] = useState('');
     /*console.log(itemBusca)*/
 
     var myHeaders = new Headers();
@@ -31,21 +32,26 @@ function Home() {
 
     function handleKeyPress(e) {
         var key = e.key;
+        
         if (key === "Enter") {
+            if (itemBusca !== ''){
             fetch('https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?maxRecords=3&view=Grid%20view', {
                 method: 'POST',
                 headers: myHeaders,
                 body: raw,
-            })
+                })
+            } else {
+                toast.error('Digite alguma hashtag para busca!');
+            }
         }
     }
 
     //twitter
     const itens = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     
-    // const texto = 'natureza'
+    const texto = 'natureza'
 
-    const { isLoading, value } = useFetch(itemBusca)
+    const { isLoading, value } = useFetch(texto)
 
     return (
         <section>
