@@ -4,6 +4,8 @@ import { SwiperSlide, Swiper } from 'swiper/react'
 import './swiper.css'
 
 function Carrossel({itens}) {
+    console.log('--------------------------------------------------')
+    console.log(itens)
 
     return (
         <Swiper
@@ -32,16 +34,38 @@ function Carrossel({itens}) {
                 "--swiper-pagination-bullet-size": "12px"
             }}
         >
-            {itens.map((_, index) => {
-                return (
+            {itens.meta.result_count >= 10 ? itens.data.map((tweet, index) => {
+
+                if('attachments' in tweet) {
+                    console.log(tweet)
+                    let mediaKey = tweet.attachments.media_keys[0];
+                    console.log('mediaKey do Tweet com imagem' + mediaKey)
+                    let url = itens.includes.media.filter((media) => {
+                        if(media.media_key === mediaKey) {
+                           return true;
+                        }
+                    })
+                    console.log(url);
+                    let id = tweet.author_id;
+                    console.log('Id do tweet com imagem ' + id)
+                    let users = itens.includes.users.filter((users) => {
+                        if(users.id === id) {
+                            return true
+                        } 
+                    });
+                    console.log(users)
+                    return (
                     <SwiperSlide key={index} id='slides'>
                         <div className='carrosselConteudo'>
-                            <img src={`https://picsum.photos/id/${10 + index}/200/300`} alt="" />
-                            <p>Postado por: <br></br>@twitterusername</p>
+                            <img src={url[0].url} alt="Foto de perfil" />
+                            <p>Postado por: {users[0].name}<br></br>@${users[0].username}</p>
                         </div>
-                    </SwiperSlide>
-                )
-            })}
+                    </SwiperSlide>)
+                } else {
+                    return []
+                }
+                }):''}
+
         </Swiper>
     )
 }

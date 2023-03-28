@@ -3,14 +3,15 @@ import styles from './cartao.module.css'
 
 function Cartao({ itens }) {
     
+    console.log(itens.meta.result_count)
     return (
         <div className={styles.listaDeUsuarios}>
-
-            {itens.data.map((_, index) => {
+            
+            {itens.meta.result_count >= 10 ? itens.data.map((_, index) => {
                 return (
+                    
                     <div className={styles.itemContent} key={index}>
-                        <img src={itens.includes.users[index].profile_image_url
-                        } alt="Imagem do Perfil" />
+                        <img src={itens.includes.users[index].profile_image_url} alt="Imagem do Perfil" />
                         <div className={styles.usuarioInfo}>
                             <div>
                                 <h3>{itens.includes.users[index].name}</h3>
@@ -22,7 +23,7 @@ function Cartao({ itens }) {
                         </div>
                     </div>
                 )
-            })}
+            }): ''}
         </div>
     )
 }
