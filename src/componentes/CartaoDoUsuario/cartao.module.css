@@ -57,17 +57,8 @@
 
 @media screen and (min-width: 1024px) {
     .listaDeUsuarios {
-        align-items: start;
+        align-items: center;
         padding: 125px 5vw;
         gap: 3vw;
-    }
-
-    .itemContent:nth-child(2n) {
-        padding: 20px 15px 15px 35px;
-        align-self: center;
-    }
-
-    .itemContent:nth-child(3n + 2) {
-        align-self: start;
-    }
+    } 
 }
