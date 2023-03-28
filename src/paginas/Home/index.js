@@ -12,7 +12,7 @@ function Home() {
 
     //busca
     const [itemBusca, setItemBusca] = useState('');
-    /*console.log(itemBusca)*/
+    Date.now();
 
     var myHeaders = new Headers();
     myHeaders.append("content-type", "application/json");
@@ -24,7 +24,7 @@ function Home() {
                 "fields": {
                     "Squad": "03-23",
                     "Hashtag": itemBusca,
-                    "Data": 1668275903874
+                    "Data": Date.now()
                 }
             }
         ]
@@ -41,7 +41,7 @@ function Home() {
                 body: raw,
                 })
             } else {
-                toast.error('Digite alguma hashtag para busca!');
+                toast.error('Digite alguma hashtag para a busca!');
             }
         }
     }
@@ -70,6 +70,7 @@ function Home() {
                     onChange={itemBusca => setItemBusca(itemBusca.target.value)}
                     value={itemBusca}
                     onKeyDown={(e) => handleKeyPress(e)}
+                    maxLength="20"
                     required
                 ></input>
             </div>
