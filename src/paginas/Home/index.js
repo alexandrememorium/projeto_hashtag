@@ -64,7 +64,7 @@ function Home() {
             </div>
 
             <div className={styles.header}>
-                <h1>Encontre hashtags<br></br> de maneira fácil.</h1>
+                <h1>Encontre hashtags<br></br> de maneira fácil</h1>
                 <p>Digite o que deseja no campo de buscas e<br></br> confira os resultados do Twitter abaixo</p>
                 <input
                     type={'text'}
