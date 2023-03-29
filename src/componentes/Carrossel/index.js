@@ -3,7 +3,10 @@ import { Navigation, Pagination } from 'swiper'
 import { SwiperSlide, Swiper } from 'swiper/react'
 import './swiper.css'
 
-function Carrossel({itens}) {
+function Carrossel({ itens }) {
+
+    // console.log('Carrossel');
+    // console.log(itens);
 
     return (
         <Swiper
@@ -32,15 +35,17 @@ function Carrossel({itens}) {
                 "--swiper-pagination-bullet-size": "12px"
             }}
         >
-            {itens.map((_, index) => {
+            {itens === null ? '': itens.map((tweet, index) => {
+
                 return (
                     <SwiperSlide key={index} id='slides'>
                         <div className='carrosselConteudo'>
-                            <img src={`https://picsum.photos/id/${10 + index}/200/300`} alt="" />
-                            <p>Postado por: <br></br>@twitterusername</p>
+                            <img src={tweet.media} alt="Foto de perfil" />
+                            <p>Postado por: {tweet.nome}<br></br>@${tweet.user}</p>
                         </div>
-                    </SwiperSlide>
-                )
+                    </SwiperSlide>)
+
+
             })}
         </Swiper>
     )

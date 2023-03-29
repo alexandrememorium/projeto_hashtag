@@ -26,6 +26,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 3.865vw;
 }
 
 .header h1 {
@@ -60,6 +61,7 @@ p {
         background-image: url("../../img/hero-bg.jpg");
         align-items: flex-start;
         margin-bottom: 120px;
+        font-size: 0.833vw;
     }
 
     .header h1 {
@@ -89,6 +91,7 @@ p {
     .header {
         height: 660px;
         margin-bottom: 240px;
+        font-size: 1.25vw;
     }
 
     .header h1 {
