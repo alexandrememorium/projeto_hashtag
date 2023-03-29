@@ -4,7 +4,8 @@ import {Redirect} from 'react-router-dom';
 import { isEmail } from 'validator';
 import { toast } from 'react-toastify';
 
-import './Login.css';
+//import './Login.css';
+import styles from './Login.module.css';
 import Menu from '../../componentes/Menu';
 
 
@@ -64,13 +65,13 @@ export default function Login() {
 
 
   return (
-    <div className="fundoPag">
+    <div className={styles.fundoPag}>
        { redirecionaBusca === true ? <Redirect to="/Busca" /> : '' }
 
-      <div className="loginNav">
+      <div className={styles.loginNav}>
         <Menu headerHeightMobile={12.5} headerHeightDesktop={39.25}/>
       </div>      
-      <div className="paginaLogin">
+      <div className={styles.paginaLogin}>
         <form onSubmit={handleSubmit}>
           <h1>Login</h1>
           <label htmlFor="email">

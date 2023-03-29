@@ -3,27 +3,29 @@ import styles from './cartao.module.css'
 
 function Cartao({ itens }) {
     
-    console.log(itens.meta.result_count)
+    // console.log('Cartão');
+    // console.log(itens);
+
     return (
         <div className={styles.listaDeUsuarios}>
             
-            {itens.meta.result_count >= 10 ? itens.data.map((_, index) => {
+            {itens === null ? '': itens.map((tweet, index) => {
+                // console.log(tweet)
                 return (
-                    
                     <div className={styles.itemContent} key={index}>
-                        <img src={itens.includes.users[index].profile_image_url} alt="Imagem do Perfil" />
+                        <img src={tweet.ftPerfil} alt="Imagem do Perfil" />
                         <div className={styles.usuarioInfo}>
                             <div>
-                                <h3>{itens.includes.users[index].name}</h3>
-                                <p>{`@${itens.includes.users[index].username}`}</p>
+                                <h3>{tweet.nome}</h3>
+                                <p>{`@${tweet.user}`}</p>
                             </div>
-                            <p>{itens.data[index].text}</p>
+                            <p>{tweet.texto}</p>
                             <a href="http://www.twitter.com">Ver mais no Twitter</a>
 
                         </div>
                     </div>
                 )
-            }): ''}
+            })}
         </div>
     )
 }
