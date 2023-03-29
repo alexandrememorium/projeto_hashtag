@@ -5,6 +5,7 @@ import Menu from '../../componentes/Menu/';
 import styles from './home.module.css';
 import Rodape from '../../componentes/Rodape'
 import Cartao from '../../componentes/CartaoDoUsuario';
+import { toast } from 'react-toastify';
 import conectaAPI from '../../componentes/TwitterAPI/index.js'
 
 function Home() {
@@ -23,7 +24,7 @@ function Home() {
                 "fields": {
                     "Squad": "03-23",
                     "Hashtag": itemBusca,
-                    "Data": 1668275903874
+                    "Data": Date.now()
                 }
             }
         ]
@@ -31,12 +32,17 @@ function Home() {
 
     function handleKeyPress(e) {
         var key = e.key;
+        
         if (key === "Enter") {
+            if (itemBusca !== ''){
             fetch('https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?maxRecords=3&view=Grid%20view', {
                 method: 'POST',
                 headers: myHeaders,
                 body: raw,
-            })
+                })
+            } else {
+                toast.error('Digite alguma hashtag para a busca!');
+            }
         }
     }
 
@@ -70,6 +76,7 @@ function Home() {
                     onChange={itemBusca => setItemBusca(itemBusca.target.value)}
                     value={itemBusca}
                     onKeyDown={(e) => handleKeyPress(e)}
+                    maxLength="20"
                     required
                 ></input>
             </div>
