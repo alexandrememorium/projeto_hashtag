@@ -1,3 +1,7 @@
+html {
+  font-size: 0.833vw; /*com base na proporção de 16px para o tamanho de tela de layout especificado de 414, isso mudará o valor padrão da unidade rem da sua página*/
+}
+
 .fundoPag * {
   font-family: 'Rubik', sans-serif;
   margin: 0;
@@ -5,6 +9,7 @@
   outline: none;
   box-sizing: border-box;
 }
+
 
 .fundoPag .loginNav {
   width: 100%;
@@ -39,6 +44,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  
 }
 
 .fundoPag .paginaLogin {
@@ -83,6 +89,10 @@
 /* responsivo - media query */
 
 @media all and (min-width: 320px) and (max-width: 414px) {
+  html {
+    font-size: 3.865vw;  /*com base na proporção de 16px para o tamanho da tela de layout especificado de 1920, isso mudará o valor padrão da unidade rem da sua página*/
+  }
+
   .fundoPag .paginaLogin {
     width: 21.25rem;
     height: 28.75rem;
@@ -98,6 +108,10 @@
 }
 
 @media all and (min-width: 415px) and (max-width: 768px) {
+  html {
+    font-size: 2.2vw;  /*com base na proporção de 16px para o tamanho da tela de layout especificado de 1920, isso mudará o valor padrão da unidade rem da sua página*/
+  }
+
   .fundoPag .paginaLogin {
     width: 22.313rem;
     height: 29rem;
@@ -109,5 +123,11 @@
 
   .paginaLogin form {
     margin-top: 0;
+  }
+}
+
+@media all and (min-width: 769px) and (max-width: 1000px) {
+  html {
+    font-size: 1.2vw;  /*com base na proporção de 16px para o tamanho da tela de layout especificado de 1920, isso mudará o valor padrão da unidade rem da sua página*/
   }
 }

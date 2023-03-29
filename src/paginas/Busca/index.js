@@ -1,4 +1,3 @@
-
 import React from 'react'
 import styles from './busca.module.css'
 import Menu from '../../componentes/Menu';

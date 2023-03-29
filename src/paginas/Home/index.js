@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import 'swiper/swiper-bundle.min.css';
+import { toast } from 'react-toastify';
 import Carrossel from '../../componentes/Carrossel';
 import Menu from '../../componentes/Menu/';
-import styles from './home.module.css';
 import Rodape from '../../componentes/Rodape'
 import Cartao from '../../componentes/CartaoDoUsuario';
-import { toast } from 'react-toastify';
 import conectaAPI from '../../componentes/TwitterAPI/index.js'
+import styles from './home.module.css';
 
 function Home() {
 
     //busca
     const [itemBusca, setItemBusca] = useState('');
-    /*console.log(itemBusca)*/
+
+    const [value, setValue] = useState(null);
+    const [error, setError] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
 
     var myHeaders = new Headers();
     myHeaders.append("content-type", "application/json");
@@ -32,33 +35,29 @@ function Home() {
 
     function handleKeyPress(e) {
         var key = e.key;
-        
+
         if (key === "Enter") {
-            if (itemBusca !== ''){
-            fetch('https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?maxRecords=3&view=Grid%20view', {
-                method: 'POST',
-                headers: myHeaders,
-                body: raw,
-                })
+            if (itemBusca !== '') {
+                fetch('https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?maxRecords=3&view=Grid%20view', {
+                    method: 'POST',
+                    headers: myHeaders,
+                    body: raw,
+                });
+
+                conectaAPI(itemBusca, setValue, setError, setIsLoading);
             } else {
                 toast.error('Digite alguma hashtag para a busca!');
             }
         }
     }
+    // debugger
+    // useEffect(() => {
+    //     if (itemBusca) {
+            
+    //     }
+    // }, [itemBusca])
 
-    const [value, setValue] = useState(null);
-    // const [error, setError] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(() => {
-        if (itemBusca) {
-            let url = `https://cors.eu.org/https://api.twitter.com/2/tweets/search/recent?query=${itemBusca} lang:pt has:images&expansions=attachments.media_keys,author_id,referenced_tweets.id,geo.place_id&media.fields=url&place.fields=country_code&user.fields=name,username,profile_image_url&max_results=20`;
-
-            conectaAPI(url, setValue, setIsLoading);
-        }
-    }, [itemBusca])
-
-    console.log(value)
     return (
         <section>
 
@@ -67,7 +66,7 @@ function Home() {
             </div>
 
             <div className={styles.header}>
-                <h1>Encontre hashtags<br></br> de maneira fácil.</h1>
+                <h1>Encontre hashtags<br></br> de maneira fácil</h1>
                 <p>Digite o que deseja no campo de buscas e<br></br> confira os resultados do Twitter abaixo</p>
                 <input
                     type={'text'}
@@ -81,7 +80,7 @@ function Home() {
                 ></input>
             </div>
 
-            {isLoading === true ? '' :
+            {!(isLoading === false) ? '' : error !== '' ? toast.error(error) :
                 <div className={styles.body}>
                     <h2>Exibindo os 10 resultados mais recentes para #{itemBusca}</h2>
 
@@ -90,8 +89,8 @@ function Home() {
                     </div>
 
                     <Cartao itens={value} />
-
-                </div>}
+                </div>
+            }
             <Rodape />
 
         </section>
