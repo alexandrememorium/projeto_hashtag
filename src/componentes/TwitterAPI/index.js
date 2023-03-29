@@ -14,7 +14,7 @@ function conectaAPI(url, setValue, setIsLoading) {
 
             const res = await response.json();
             console.log(res)
-            const arrayUsers = res.data.map((data, index) => {
+            const arrayUsers = res.datas.map((data, index) => {
                 
                 if ('attachments' in data) {
                     const usuario = {
