@@ -4,10 +4,10 @@ import Home from './paginas/Home/index.js';
 import Busca from './paginas/Busca/index.js';
 
 //paginas
-import Home from './paginas/Home/index.js';
+
 import Login from './paginas/Login/index.js';
 import Sobre from "./paginas/Sobre/index.js";
-import Busca from './paginas/Busca/index.js';
+
 
 function App() {
   return (
