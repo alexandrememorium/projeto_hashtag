@@ -39,17 +39,20 @@ function Home() {
             })
         }
     }
+
     const [value, setValue] = useState(null);
-    const [error, setError] = useState(null);
+    // const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        if(itemBusca) {
+        if (itemBusca) {
+            let url = `https://cors.eu.org/https://api.twitter.com/2/tweets/search/recent?query=${itemBusca} lang:pt has:images&expansions=attachments.media_keys,author_id,referenced_tweets.id,geo.place_id&media.fields=url&place.fields=country_code&user.fields=name,username,profile_image_url&max_results=20`;
 
-            conectaAPI(itemBusca, setValue, setError, setIsLoading);
+            conectaAPI(url, setValue, setIsLoading);
         }
     }, [itemBusca])
 
+    console.log(value)
     return (
         <section>
 
@@ -71,7 +74,7 @@ function Home() {
                 ></input>
             </div>
 
-            {isLoading === true ? '':
+            {isLoading === true ? '' :
                 <div className={styles.body}>
                     <h2>Exibindo os 10 resultados mais recentes para #{itemBusca}</h2>
 
