@@ -42,7 +42,7 @@ export default function index() {
         Buscas realizadas
       </div>
 
-      <div className={styles.caixa_busca}>
+      
 
         <div className={styles.container_hashtag}>
 
@@ -60,7 +60,7 @@ export default function index() {
 
         </div>
 
-      </div>
+      
       <div className={styles.mostra_busca}>
 
       </div>
