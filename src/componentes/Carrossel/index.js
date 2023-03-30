@@ -5,9 +5,6 @@ import './swiper.css'
 
 function Carrossel({ itens }) {
 
-    // console.log('Carrossel');
-    // console.log(itens);
-
     return (
         <Swiper
             loop={true}
@@ -28,7 +25,7 @@ function Carrossel({ itens }) {
                 },
                 1300: {
                     slidesPerView: 5,
-                    spaceBetween: 50
+                    
                 }
             }}
             style={{
@@ -40,7 +37,7 @@ function Carrossel({ itens }) {
                 return (
                     <SwiperSlide key={index} id='slides'>
                         <div className='carrosselConteudo'>
-                            <img src={tweet.media} alt="Foto de perfil" />
+                            <img src={tweet.media} alt="" />
                             <p>Postado por: {tweet.nome}<br></br>@${tweet.user}</p>
                         </div>
                     </SwiperSlide>)

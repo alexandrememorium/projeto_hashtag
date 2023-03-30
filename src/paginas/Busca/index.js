@@ -1,4 +1,3 @@
-
 import React from 'react'
 import styles from './busca.module.css'
 import Menu from '../../componentes/Menu';
@@ -43,7 +42,7 @@ export default function index() {
         Buscas realizadas
       </div>
 
-      <div className={styles.caixa_busca}>
+      
 
         <div className={styles.container_hashtag}>
 
@@ -61,7 +60,7 @@ export default function index() {
 
         </div>
 
-      </div>
+      
       <div className={styles.mostra_busca}>
 
       </div>
