@@ -33,6 +33,7 @@
     width: 160px;
     height: 230px;
     border-radius: 21px;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {
