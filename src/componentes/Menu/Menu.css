@@ -117,7 +117,7 @@ nav.appNav .navLink img {
     margin-right: 0.488rem;
 }
 
-@media screen and (min-width: 481px){
+@media screen and (min-width: 768px){
     html {
         font-size: 0.833vw; /*com base na proporção de 16px para o tamanho da tela de layout especificado de 1920, isso mudará o valor padrão da unidade rem da sua página*/
     }
