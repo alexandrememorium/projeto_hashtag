@@ -11,7 +11,7 @@ import styles from './home.module.css';
 function Home() {
 
     //busca
-    const [itemBusca, setItemBusca] = useState('');
+    let [itemBusca, setItemBusca] = useState('');
 
     const [value, setValue] = useState(null);
     const [error, setError] = useState('');
@@ -43,7 +43,7 @@ function Home() {
                     headers: myHeaders,
                     body: raw,
                 });
-
+                console.log(itemBusca)
                 conectaAPI(itemBusca, setValue, setError, setIsLoading);
             } else {
                 toast.error('Digite alguma hashtag para a busca!');
@@ -72,10 +72,11 @@ function Home() {
                     type={'text'}
                     name={'Busca'}
                     placeholder={'Buscar...'}
-                    onChange={itemBusca => setItemBusca(itemBusca.target.value)}
+                    onChange={itemBusca => setItemBusca(itemBusca.target.value.replace(/[#]/g, ''))}
                     value={itemBusca}
                     onKeyDown={(e) => handleKeyPress(e)}
                     maxLength="20"
+                    
                     required
                 ></input>
             </div>
