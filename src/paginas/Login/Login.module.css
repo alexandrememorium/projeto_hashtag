@@ -96,6 +96,7 @@
   .fundoPag .paginaLogin {
     width: 21.25rem;
     height: 28.75rem;
+    font-size: 3.865vw;
   }
 
   .paginaLogin form input {
