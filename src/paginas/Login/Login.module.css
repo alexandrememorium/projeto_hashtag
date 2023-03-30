@@ -1,15 +1,11 @@
-.fundoPag  {
-  font-size: 0,8px; /*com base na proporção de 16px para o tamanho de tela de layout especificado de 414, isso mudará o valor padrão da unidade rem da sua página*/
-}
-
-.fundoPag * {
+.fundoPag {
   font-family: 'Rubik', sans-serif;
+  font-size: 0,8px;
   margin: 0;
   padding: 0;
   outline: none;
   box-sizing: border-box;
 }
-
 
 .fundoPag .loginNav {
   width: 100%;
@@ -44,11 +40,10 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  
 }
 
 .fundoPag .paginaLogin {
-  width: 480px;
+  width: 450px;
   height: 510px;
   border-radius: 0.875rem;
   margin-top: 6.8rem;
@@ -72,7 +67,7 @@
   border-left: none;
   border-right: none;
   padding: 0 0.313rem;
-  width: 26.553rem;
+  width: 24.553rem;
   margin-top: 1.563rem;
 }
 
@@ -96,7 +91,7 @@
   }
 
   .fundoPag .paginaLogin {
-    width: 320px;
+    width: 318px;
     height: 500px;
     font-size: 3,8px;
   }
@@ -135,7 +130,7 @@
 
 @media all and (min-width: 769px) and (max-width: 1150px) {
   .fundoPag .paginaLogin {
-    width: 480px;
+    width: 450px;
     height: 510px;
     font-size: 1,2px;  /*com base na proporção de 16px para o tamanho da tela de layout especificado de 1920, isso mudará o valor padrão da unidade rem da sua página*/
   }
