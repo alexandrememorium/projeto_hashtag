@@ -1,79 +1,73 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import styles from './busca.module.css'
 import Menu from '../../componentes/Menu';
 
+//Formatar Data
+function formatDate(date) {
+  let newDate = new Intl.DateTimeFormat("pt-br", {
+      day: "2-digit",
+      month: "2-digit",
+  }).format(date);
+  return newDate;
+}
+//Formatar Hora
+function formatTime(time) {
+let  newhour = new Intl.DateTimeFormat("pt-br", {
+  hour: "numeric",
+  minute: "numeric",
+}).format(time);
+return newhour;
+}
 
+export default function Busca() { 
 
-export default function Index() { 
-  const [] = useState('');
+  const [dados, setDados] = useState([]);
 
-    fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?view=Grid%20view&api_key=keykXHtsEPprqdSBF&filterByFormula=Find(%2203-23%22%2C+Squad)")
+  useEffect(() => {
+  
+    fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?&pageSize=10&sort%5B0%5D%5Bfield%5D=Data&sort%5B0%5D%5Bdirection%5D=desc&view=Grid%20view&api_key=keykXHtsEPprqdSBF&filterByFormula=Find(%2203-23%22%2C+Squad)")
      .then(response => response.json())
-     .then(res => res.records)
-     .catch(error => console.error(error))
+     .then(dados => {
+      setDados(dados.records);
+      console.log(dados.records);
+     })
+  },[]);
     
-    
-    const records = [];     
-    {     
-      <header className="container_mostra_busca">    
-        {records;slice(0, 10).map((record)  => {})                         
-            <div>
-              <div id='Hashtagname'>
-                <p id="Hashtagnamem" {record.id} />
-              </div>                     
-              <div className="Createdtime">
-                <p className="time">
-                  <b></b> {record.fields.Data}
-                </p>
-              </div>
-              <div className="Fields">
-                <p className="nome">
-                  <b></b> {record.fields.Hashtag}
-                </p>
-              </div>
-            </div>                     
-        }
-      </header>
-    }
   return (
-     
-    <div className={styles.fundoPag}>
-          
-      <Menu headerHeightMobile={12.5} headerHeightDesktop={39.25}/>
-      
-      <div className={styles.Apptop}>
-        
-      </div >
-      <div >
+    <div className={styles.fundoPagBusca}>
+        <div className={styles.buscaMenu} >
+            <Menu headerHeightMobile={5.875} headerHeightDesktop={7.5593}/>
+        </div>
+        <div className={styles.busca}>
+            <div className={styles.buscaResultadoDiv}>
+                <span className={styles.buscaTitulo}>Buscas realizadas</span>
+            </div>
 
-      <div className={styles.buscas_realizadas}>
-        Buscas realizadas
-      </div>
-
-        <div className={styles.container_externo_hashtag}>
-
-        <div className={styles.container_hashtag}>
-
-          <div className={styles.hashtag}>
-            Hashtag
-          </div>
-
-          <div className={styles.data}>
-            Data
-          </div>
-
-          <div className={styles.hora}>
-            Hora
-          </div>
+            <table className={styles.lista}>
+                <thead>
+                    <tr className={styles.listaTop}>
+                        <th className={styles.listaResultadoTop}>Hashtag</th>
+                        <th className={styles.listaResultadoTop}>Data</th>
+                        <th className={styles.listaResultadoTop}>Hora</th>
+                    </tr>
+                </thead>
+                <tbody>                        
+                        {dados?.map(
+                            item =>
+                            (
+                                <tr className="listingLine" key={item.id}>
+                                    <td className={styles.listaResultadoLinha}>{item.fields.Hashtag}</td>
+                                    <td className={styles.listaResultadoLinha}>{formatDate(item.fields.Data)}</td>
+                                    <td className={styles.listaResultadoLinha}>{formatTime(item.fields.Hora)}</td>
+                                </tr>
+                            ))
+                        }
+                </tbody>
+            </table>
 
         </div>
-
-      
-      <div className={styles.mostra_busca}>
-      </div>
-      </div>
-      </div>
-
     </div>
-  );
+);
 }
+
+

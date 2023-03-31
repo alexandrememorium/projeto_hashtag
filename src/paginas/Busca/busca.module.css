@@ -1,10 +1,61 @@
-.fundoPag * {
-  font-family: 'Rubik', sans-serif;
-  margin: 0;
-  padding: 0;
-  outline: none;
-  box-sizing: border-box;
+.fundoPagBusca {
+    background-image: url(../../img/login-bg.jpg);
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    font-family: 'Rubik', sans-serif;    
 }
+
+.buscaMenu{
+  margin-right: 2rem;
+}
+
+.busca{
+  margin-top:50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.buscaResultadoDiv {
+  width: 70%;
+}
+
+.buscaTitulo{
+  color:#FFFFFF;
+  font-weight: bold;
+  padding:20px 0;  
+  font-size:40px;
+  justify-items:left;
+}
+
+.lista{
+  background-color: #FFFFFF;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.listaTop{
+  color:#3633F7;
+  background-color: #F1F1F1;
+  border-radius: 20px 20px 0 0;
+  padding:10px;
+  text-align: left;  
+}
+
+.listaResultadoTop{
+  padding: 20px;
+ 
+}
+
+.listaResultadoLinha{
+  border-bottom: 1px solid #41558E;
+  margin: 10px;
+  color: #292929;
+  padding:30px;
+  text-align: left;
+}
+
 
 .fundoPag .loginNav {
   width: 100%;
