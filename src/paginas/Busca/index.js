@@ -4,62 +4,37 @@ import Menu from '../../componentes/Menu';
 
 
 
+export default function Index() { 
+  const [] = useState('');
 
-
-export default function Index() {
-  
-  
- 
     fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?view=Grid%20view&api_key=keykXHtsEPprqdSBF&filterByFormula=Find(%2203-23%22%2C+Squad)")
      .then(response => response.json())
      .then(res => res.records)
      .catch(error => console.error(error))
-     
     
-    const records = []; 
-
     
-    {
-
-      
-      <header className="container_mostra_busca">
-        
-        {records;slice(0, 10).map((record)  => {})
-       
-          return (
-        
+    const records = [];     
+    {     
+      <header className="container_mostra_busca">    
+        {records;slice(0, 10).map((record)  => {})                         
             <div>
               <div id='Hashtagname'>
-                <p id="Hashtagnamem" key=record.id />
-              </div>
-                
-        
+                <p id="Hashtagnamem" {record.id} />
+              </div>                     
               <div className="Createdtime">
                 <p className="time">
-                  <b></b> records.fields.Data
+                  <b></b> {record.fields.Data}
                 </p>
-
               </div>
-                 
-
               <div className="Fields">
                 <p className="nome">
-                  <b></b> {fields.name}
+                  <b></b> {record.fields.Hashtag}
                 </p>
-
               </div>
-            </div>
-            
-          )
-
-        })}
-
+            </div>                     
+        }
       </header>
     }
-  
-  
-  
-  
   return (
      
     <div className={styles.fundoPag}>
