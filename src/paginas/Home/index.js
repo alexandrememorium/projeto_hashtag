@@ -12,6 +12,7 @@ function Home() {
 
     //busca
     let [itemBusca, setItemBusca] = useState('');
+    let [itemResultado, setItemResultado] = useState('');
 
     const [value, setValue] = useState(null);
     const [error, setError] = useState('');
@@ -43,19 +44,13 @@ function Home() {
                     headers: myHeaders,
                     body: raw,
                 });
-                console.log(itemBusca)
+                setItemResultado(itemBusca);
                 conectaAPI(itemBusca, setValue, setError, setIsLoading);
             } else {
                 toast.error('Digite alguma hashtag para a busca!');
             }
         }
     }
-    // debugger
-    // useEffect(() => {
-    //     if (itemBusca) {
-            
-    //     }
-    // }, [itemBusca])
 
 
     return (
@@ -76,14 +71,13 @@ function Home() {
                     value={itemBusca}
                     onKeyDown={(e) => handleKeyPress(e)}
                     maxLength="20"
-                    
                     required
                 ></input>
             </div>
 
             {!(isLoading === false) ? '' : error !== '' ? toast.error(error) :
                 <div className={styles.body}>
-                    <h2>Exibindo os 10 resultados mais recentes para #{itemBusca}</h2>
+                    <h2>Exibindo os 10 resultados mais recentes para #{itemResultado}</h2>
 
                     <div className={styles.carrosselContainer}>
                         <Carrossel itens={value} />
