@@ -11,7 +11,10 @@ import image from '../../img/search.png';
 
 function Home() {
 
-    const [itemBusca, setItemBusca] = useState('');
+    //busca
+    let [itemBusca, setItemBusca] = useState('');
+    let [itemResultado, setItemResultado] = useState('');
+
     const [value, setValue] = useState(null);
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
@@ -42,6 +45,7 @@ function Home() {
                     headers: myHeaders,
                     body: raw,
                 });
+                setItemResultado(itemBusca);
 
                 let url = `https://cors.eu.org/https://api.twitter.com/2/tweets/search/recent?query=${itemBusca} lang:pt has:images&expansions=attachments.media_keys,author_id,referenced_tweets.id,geo.place_id&media.fields=url&place.fields=country_code&user.fields=name,username,profile_image_url`;
 
@@ -80,9 +84,7 @@ function Home() {
                     type={'text'}
                     name={'Busca'}
                     placeholder={'Buscar...'}
-                    onChange={itemBusca => {
-                        setItemBusca(itemBusca.target.value);
-                    }}
+                    onChange={itemBusca => setItemBusca(itemBusca.target.value.replace(/[#]/g, ''))}
                     value={itemBusca}
                     onKeyDown={(e) => handleKeyPress(e)}
                     maxLength="20"
@@ -96,7 +98,7 @@ function Home() {
                     <img src={image} alt="Error" />
                 </div> :
                 <div className={styles.body}>
-                    <h2>Exibindo os 10 resultados mais recentes para #{itemBusca}</h2>
+                    <h2>Exibindo os 10 resultados mais recentes para #{itemResultado}</h2>
 
                     <div className={styles.carrosselContainer}>
                         <Carrossel itens={value} />
