@@ -127,7 +127,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 40px 0px 55px 64px;
-  }  
+}  
   
   
   
@@ -234,7 +234,7 @@
     
 
      
-    div.navMenu {
+    .div.navMenu {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
