@@ -13,7 +13,7 @@ function Cartao({ itens }) {
     return (
         <div className={styles.listaDeUsuarios}>
             
-            {itens === null ? '': itens.map((tweet, index) => {
+            {itens === null ? '': itens.slice(0, 10).map((tweet, index) => {
                 
                 return (
                     <div data-aos="fade-up" className={styles.itemContent} key={index}>
