@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from './sobre.module.css'
 
 
@@ -10,60 +10,48 @@ import IconeLikedIn from "../../img/icon-linkedin.svg";
 import Rodape from "../../componentes/Rodape/index.js"
 import Menu from "../../componentes/Menu";
 
-const membros = [
-  {
-    nome:"NomeSobrenome",
-    descricao:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat...",
-    foto: "https://img.freepik.com/fotos-gratis/freelancer-feliz-com-tablet-e-laptop-em-uma-cafeteria_342744-942.jpg?w=740&t=st=1679581410~exp=1679582010~hmac=c2ba6c2202d2bc9400336ee78a1e745ee6f4add0a26f5479e7e1fafbf61f222f"
-  },
 
-  {
-    nome:"NomeSobrenome",
-    descricao:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat...",
-    foto: "https://img.freepik.com/fotos-gratis/freelancer-feliz-com-tablet-e-laptop-em-uma-cafeteria_342744-942.jpg?w=740&t=st=1679581410~exp=1679582010~hmac=c2ba6c2202d2bc9400336ee78a1e745ee6f4add0a26f5479e7e1fafbf61f222f"
-  },
-
-  {
-    nome:"NomeSobrenome",
-    descricao:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat...",
-    foto: "https://img.freepik.com/fotos-gratis/freelancer-feliz-com-tablet-e-laptop-em-uma-cafeteria_342744-942.jpg?w=740&t=st=1679581410~exp=1679582010~hmac=c2ba6c2202d2bc9400336ee78a1e745ee6f4add0a26f5479e7e1fafbf61f222f"
-  },
-
-  {
-    nome:"NomeSobrenome",
-    descricao:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat...",
-    foto: "https://img.freepik.com/fotos-gratis/freelancer-feliz-com-tablet-e-laptop-em-uma-cafeteria_342744-942.jpg?w=740&t=st=1679581410~exp=1679582010~hmac=c2ba6c2202d2bc9400336ee78a1e745ee6f4add0a26f5479e7e1fafbf61f222f"
-  },
-
-  {
-    nome:"NomeSobrenome",
-    descricao:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat...",
-    foto: "https://img.freepik.com/fotos-gratis/freelancer-feliz-com-tablet-e-laptop-em-uma-cafeteria_342744-942.jpg?w=740&t=st=1679581410~exp=1679582010~hmac=c2ba6c2202d2bc9400336ee78a1e745ee6f4add0a26f5479e7e1fafbf61f222f"
-  },
-
-];
  
-//function Sobre() {
-export default class Sobre extends React.Component {
+const Sobre = () => {
 
-  state = {
-      textoSobre:""
-   }
+  const [texto, setTexto] = useState("");
+  const [equipe, setEquipe] = useState([]);
 
-   componentDidMount(){
-    this.getTabelaSobre()
-  }
-  
-  getTabelaSobre(){
-    fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/Projeto?maxRecords=1&view=Grid%20view&api_key=keykXHtsEPprqdSBF&filterByFormula=Find(%2203-23%22%2C+Squad)", {
-    })
-    .then(response => response.json())
-    .then(responseJson => {
-        this.setState({textoSobre:responseJson.records[0].fields.Sobre})
-    })
-  }
-  
-  render() {   
+  const API_KEY = "keykXHtsEPprqdSBF"
+
+      useEffect(() => {
+        fetch(
+          "https://api.airtable.com/v0/app6wQWfM6eJngkD4/Projeto?filterByFormula=" +
+            encodeURI(`({Squad} = '03-23')`),
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${API_KEY}`,
+            },
+          }
+        )
+          .then((res) => res.json())
+          .then((response) => {
+            setTexto(response.records[0].fields.Sobre);
+          })
+          .catch((erro) => console.log(erro));
+
+      
+        fetch(
+          "https://api.airtable.com/v0/app6wQWfM6eJngkD4/Equipe?filterByFormula=" +
+            encodeURI(`({Squad} = '03-23')`),
+          {
+            headers: {
+              Authorization: `Bearer ${API_KEY}`,
+            },
+          }
+        )
+          .then((res) => res.json())
+          .then((response) => {
+            setEquipe(response.records);
+          })
+          .catch((erro) => console.log(erro));
+      }, []);
 
     return ( 
     <div className={styles.sobre}>
@@ -79,9 +67,10 @@ export default class Sobre extends React.Component {
             <h2 className={styles.subtituloTexto}>O que é</h2>
 
             <div className={styles.blocoParagrafo}>
-              <p className={styles.blocoParagrafoTexto}>
-                {this.state.textoSobre}
-              </p>
+            <p
+                className={styles.blocoParagrafoTexto}
+                dangerouslySetInnerHTML={{ __html: texto }}
+              />
             </div>
           </div>
 
@@ -99,26 +88,26 @@ export default class Sobre extends React.Component {
       </section>
       
       <div className={styles.containerGeral}>
-        {membros.map((informacao, id) => (
+        {equipe.map((informacao, id) => (
           <div className={styles.container} key={id}>
             <div className={styles.containerMembros}>
               <div className={styles.containerCartaoMembros}>
                 <img
                   className={styles.membroFoto}
-                  src={informacao.foto}
+                  src={informacao.fields.Imagem[0].url}
                   alt=' '
                 />
                 <div className={styles.informacaoMembros}>
                   <h3 className={styles.informacaoMembrosTitulo}>
-                    {informacao.nome}
+                    {informacao.fields.Nome}
                   </h3>
                   <p className={styles.informacaoMembrosTexto}>
-                    {informacao.descricao}
+                    {informacao.fields.Descrição}
                   </p>
                 </div>
                 <div className={styles.containerIcones}>
                   <a
-                    href="/"
+                    href={informacao.fields.Github}
                     target='_blank'
                     rel='noreferrer'>
                     <img
@@ -129,7 +118,7 @@ export default class Sobre extends React.Component {
                     />
                   </a>
                   <a
-                    href="/"
+                    href={`mailto:${informacao.fields.Email}`}
                     target='_blank'
                     rel='noreferrer'>
                     <img
@@ -140,7 +129,7 @@ export default class Sobre extends React.Component {
                     />
                   </a>
                   <a
-                    href="/"
+                    href={informacao.fields.LinkedIn}
                     target='_blank'
                     rel='noreferrer'>
                     <img
@@ -161,5 +150,5 @@ export default class Sobre extends React.Component {
     </div>
    );
 }
-}
-//export default Sobre;
+
+export default Sobre;

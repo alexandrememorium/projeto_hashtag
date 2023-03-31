@@ -226,7 +226,7 @@
     }
   
     .tituloTexto {
-      font-size: 8em;
+      font-size: 3em;
       text-align: center;
       margin: 0px;
     }
@@ -238,16 +238,16 @@
     }
   
     .blocoParagrafoTexto {
-      font-size: 3em;
+      font-size: 1em;
     }
   
     .subtituloTexto {
-      font-size: 5em;
+      font-size: 3em;
     }
   
     .subtitulo2Texto {
       color: blue;
-      font-size: 5em;
+      font-size: 3em;
       margin-bottom: 46px;
       margin-left: 36px;
     }
