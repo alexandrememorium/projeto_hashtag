@@ -7,6 +7,7 @@ import Rodape from '../../componentes/Rodape'
 import Cartao from '../../componentes/CartaoDoUsuario';
 import conectaAPI from '../../componentes/TwitterAPI/index.js'
 import styles from './home.module.css';
+import image from '../../img/search.png';
 
 function Home() {
 
@@ -45,14 +46,30 @@ function Home() {
                     body: raw,
                 });
                 setItemResultado(itemBusca);
-                conectaAPI(itemBusca, setValue, setError, setIsLoading);
+
+                let url = `https://cors.eu.org/https://api.twitter.com/2/tweets/search/recent?query=${itemBusca} lang:pt has:images&expansions=attachments.media_keys,author_id,referenced_tweets.id,geo.place_id&media.fields=url&place.fields=country_code&user.fields=name,username,profile_image_url`;
+
+                let resultFound = [];
+
+                const fetchNow = function (url) {
+                    conectaAPI(url).then(res => {
+                        resultFound.push(...res.users)
+                        if (resultFound.length < 10) {
+                            fetchNow(`https://cors.eu.org/https://api.twitter.com/2/tweets/search/recent?query=${itemBusca} lang:pt has:images&expansions=attachments.media_keys,author_id,referenced_tweets.id,geo.place_id&media.fields=url&place.fields=country_code&user.fields=name,username,profile_image_url&next_token=${res.token}`);
+                        } else {
+                            setValue(resultFound);
+                            setError('');
+                        }
+                    }).catch(error => setError(error.message)).finally(() => {setIsLoading(false)});
+                }
+                fetchNow(url)
             } else {
                 toast.error('Digite alguma hashtag para a busca!');
             }
         }
+
     }
-
-
+    
     return (
         <section>
 
@@ -75,7 +92,11 @@ function Home() {
                 ></input>
             </div>
 
-            {!(isLoading === false) ? '' : error !== '' ? toast.error(error) :
+            {!(isLoading === false) ? '' : error !== '' ?
+                <div className={styles.error}>
+                    <h2>{error}</h2>
+                    <img src={image} alt="Error" />
+                </div> :
                 <div className={styles.body}>
                     <h2>Exibindo os 10 resultados mais recentes para #{itemResultado}</h2>
 
