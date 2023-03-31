@@ -1,73 +1,73 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react'
+import { useState } from 'react';
 import styles from './busca.module.css'
 import Menu from '../../componentes/Menu';
 
-//Formatar Data
-function formatDate(date) {
-  let newDate = new Intl.DateTimeFormat("pt-br", {
-      day: "2-digit",
-      month: "2-digit",
-  }).format(date);
-  return newDate;
-}
-//Formatar Hora
-function formatTime(time) {
-let  newhour = new Intl.DateTimeFormat("pt-br", {
-  hour: "numeric",
-  minute: "numeric",
-}).format(time);
-return newhour;
-}
 
-export default function Busca() { 
 
-  const [dados, setDados] = useState([]);
-
-  useEffect(() => {
+export default function Index() { 
+  const [campos, setCampos] = useState([])
   
-    fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?&pageSize=10&sort%5B0%5D%5Bfield%5D=Data&sort%5B0%5D%5Bdirection%5D=desc&view=Grid%20view&api_key=keykXHtsEPprqdSBF&filterByFormula=Find(%2203-23%22%2C+Squad)")
-     .then(response => response.json())
-     .then(dados => {
-      setDados(dados.records);
-      console.log(dados.records);
-     })
-  },[]);
-    
+  React.useEffect(() => {
+
+    fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?&pageSize=10&sort%5B0%5D%5Bfield%5D=Data&sort%5B0%5D%5Bdirection%5D=desc&view=Grid%20view&api_key=keykXHtsEPprqdSBF&filterByFormula=Find(%2203-23%22%2C+Squad)%22)"
+      .then(res => res.json())
+      .then(res => setCampos(res.records.map((record) => {
+        return {
+          hashtag: record.fields.Hashtag,
+          data: new Date(record.fields.Data)
+        }
+      }))));
+
+  }, [])       
+   
   return (
-    <div className={styles.fundoPagBusca}>
-        <div className={styles.buscaMenu} >
-            <Menu headerHeightMobile={5.875} headerHeightDesktop={7.5593}/>
-        </div>
-        <div className={styles.busca}>
-            <div className={styles.buscaResultadoDiv}>
-                <span className={styles.buscaTitulo}>Buscas realizadas</span>
-            </div>
+     
+    <div className={styles.fundoPag}>
 
-            <table className={styles.lista}>
-                <thead>
-                    <tr className={styles.listaTop}>
-                        <th className={styles.listaResultadoTop}>Hashtag</th>
-                        <th className={styles.listaResultadoTop}>Data</th>
-                        <th className={styles.listaResultadoTop}>Hora</th>
-                    </tr>
-                </thead>
-                <tbody>                        
-                        {dados?.map(
-                            item =>
-                            (
-                                <tr className="listingLine" key={item.id}>
-                                    <td className={styles.listaResultadoLinha}>{item.fields.Hashtag}</td>
-                                    <td className={styles.listaResultadoLinha}>{formatDate(item.fields.Data)}</td>
-                                    <td className={styles.listaResultadoLinha}>{formatTime(item.fields.Hora)}</td>
-                                </tr>
-                            ))
-                        }
-                </tbody>
-            </table>
+      <Menu headerHeightMobile={12.5} headerHeightDesktop={39.25} />
+
+      <div className={styles.Apptop}>
+
+      </div >
+      <div >
+
+        <div className={styles.buscas_realizadas}>
+          Buscas realizadas
+        </div>
+
+        <div className={styles.container_externo_hashtag}>
+          {campos.slice(0, 10).map((campo, index) => {
+            return (
+              <div className={styles.container_hashtag} key={index}>
+                <div className={styles.hashtag}>
+                  {campo.hashtag}
+                </div>
+
+                <div className={styles.data}>
+                {`${campo.data.toLocaleString('pt-BR',{
+                    month: '2-digit',
+                    day: '2-digit' 
+                  })}`}
+                </div>
+
+                <div className={styles.hora}>
+                  {`${campo.data.toLocaleString('pt-BR',{
+                    hour: '2-digit',
+                    minute: '2-digit'
+                  })}`}
+                </div>
+              </div>
+            )
+          })}
+        </div>
+        <div className={styles.mostra_busca}>
 
         </div>
+      </div>
+
     </div>
-);
+
+    
+  );
 }
-
-
