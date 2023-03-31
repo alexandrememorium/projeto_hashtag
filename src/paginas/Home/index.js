@@ -7,7 +7,7 @@ import Rodape from '../../componentes/Rodape'
 import Cartao from '../../componentes/CartaoDoUsuario';
 import conectaAPI from '../../componentes/TwitterAPI/index.js'
 import styles from './home.module.css';
-import image from '../../img/search.png';
+import imagem from '../../img/search.png';
 
 function Home() {
 
@@ -17,9 +17,9 @@ function Home() {
     let [itemBusca, setItemBusca] = useState('');
     let [itemResultado, setItemResultado] = useState('');
 
-    const [value, setValue] = useState(null);
-    const [error, setError] = useState('');
-    const [isLoading, setIsLoading] = useState(true);
+    const [valor, setValor] = useState(null);
+    const [erro, setErro] = useState('');
+    const [carregando, setCarregando] = useState(true);
 
     var myHeaders = new Headers();
     myHeaders.append("content-type", "application/json");
@@ -51,27 +51,27 @@ function Home() {
 
                 let url = `https://cors.eu.org/https://api.twitter.com/2/tweets/search/recent?query=${itemBusca} lang:pt has:images&expansions=attachments.media_keys,author_id,referenced_tweets.id,geo.place_id&media.fields=url&place.fields=country_code&user.fields=name,username,profile_image_url`;
 
-                let resultFound = [];
+                let resultadoEncontrado = [];
 
-                const fetchNow = function (url) {
+                const buscaTweets = function (url) {
                     conectaAPI(url).then(res => {
-                        resultFound.push(...res.users)
-                        if (resultFound.length < 10) {
-                            fetchNow(`https://cors.eu.org/https://api.twitter.com/2/tweets/search/recent?query=${itemBusca} lang:pt has:images&expansions=attachments.media_keys,author_id,referenced_tweets.id,geo.place_id&media.fields=url&place.fields=country_code&user.fields=name,username,profile_image_url&next_token=${res.token}`);
+                        if (resultadoEncontrado.length < 10) {
+                            resultadoEncontrado.push(...res.users)
+                            buscaTweets(`https://cors.eu.org/https://api.twitter.com/2/tweets/search/recent?query=${itemBusca} lang:pt has:images&expansions=attachments.media_keys,author_id,referenced_tweets.id,geo.place_id&media.fields=url&place.fields=country_code&user.fields=name,username,profile_image_url&next_token=${res.token}`);
                         } else {
-                            setValue(resultFound);
-                            setError('');
+                            setValor(resultadoEncontrado.slice(0, 10));
+                            setErro('');
                         }
-                    }).catch(error => setError(error.message)).finally(() => {setIsLoading(false)});
+                    }).catch(erro => setErro(erro.message)).finally(() => {setCarregando(false)});
                 }
-                fetchNow(url)
+                buscaTweets(url)
             } else {
                 toast.error('Digite alguma hashtag para a busca!');
             }
         }
 
     }
-    
+    console.log(valor);
     return (
         <section>
 
@@ -94,19 +94,19 @@ function Home() {
                 ></input>
             </div>
 
-            {!(isLoading === false) ? '' : error !== '' ?
+            {!(carregando === false) ? '' : erro !== '' ?
                 <div className={styles.error}>
-                    <h2>{error}</h2>
-                    <img src={image} alt="Error" />
+                    <h2>{erro}</h2>
+                    <img src={imagem} alt="Erro" />
                 </div> :
                 <div className={styles.body}>
                     <h2>Exibindo os 10 resultados mais recentes para #{itemResultado}</h2>
 
                     <div className={styles.carrosselContainer}>
-                        <Carrossel itens={value} />
+                        <Carrossel itens={valor} />
                     </div>
 
-                    <Cartao itens={value} />
+                    <Cartao itens={valor} />
                 </div>
             }
             <Rodape />
