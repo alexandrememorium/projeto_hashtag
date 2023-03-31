@@ -10,9 +10,10 @@ import IconeLikedIn from "../../img/icon-linkedin.svg";
 import Rodape from "../../componentes/Rodape/index.js"
 import Menu from "../../componentes/Menu";
 
-document.title="Projeto hashtagfinder - Sobre"
  
 const Sobre = () => {
+  
+  document.title="Projeto HashtagFinder - Sobre"
 
   const [texto, setTexto] = useState("");
   const [equipe, setEquipe] = useState([]);
