@@ -11,6 +11,8 @@ import Menu from '../../componentes/Menu';
 
 export default function Login() {
 
+  document.title = 'Projeto hashtagfinder - Login';
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [redirecionaBusca, setRedirecionaBusca] = useState(false);  
