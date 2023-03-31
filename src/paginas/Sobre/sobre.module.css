@@ -168,11 +168,11 @@
   @media screen and (max-width: 1112px) {
 
         .tituloTexto{
-          font-size: 8em;
+          font-size: 3em;
         }
 
     .subtituloTexto {
-      font-size: 5em;
+      font-size: 3em;
     }
 
     .artigo {
@@ -181,11 +181,11 @@
     }
   
     .blocoParagrafoTexto {
-      font-size: 3em;
+      font-size: 1.5em;
     }
 
     .subtitulo2Texto{
-      font-size: 5em;
+      font-size: 3em;
     }
     
   }
@@ -203,8 +203,8 @@
   
     .tituloTexto {
       font-size: 3em;
-      text-align: center;
-      margin: 0px;
+      /*text-align: center;*/
+      /*margin: 0px;*/
     }
   
     .subtitulo2Texto {
@@ -226,7 +226,7 @@
     }
   
     .tituloTexto {
-      font-size: 3em;
+      /*font-size: 3em;*/
       text-align: center;
       margin: 0px;
     }
