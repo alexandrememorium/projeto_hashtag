@@ -11,6 +11,7 @@ div.navMenu {
 .navMenuWapperHolder {
     position: absolute;
     font-size: 3.865vw;
+    font-family: 'Rubik', sans-serif;
 }
 
 .hide {
@@ -58,8 +59,8 @@ div.navMenuWapper div.transpRolagem {
 /* fim Menu transparente*/
 
 div.navMenu .logoImg {
-    width: 8.125rem;
-    height: 1.438rem;
+    width: 130px;
+    height: 23px;
     
 }
 
@@ -72,8 +73,8 @@ div.navMenu nav.appNav {
 }
 
 nav.appNav .navLink {
-    width: 24vw;
-    height: 1.875rem;
+    width: 106px;
+    height: 30px;
     background-color: #D842BD;
     display: flex;
     flex-direction: row;
@@ -87,7 +88,10 @@ nav.appNav .navLink {
     text-decoration: none;
     cursor: pointer;
 }
-
+nav.appNav .navLink h2 {
+    width: 40px;
+    height: 12px;
+}
 nav.appNav .navLink:hover {
     text-decoration: underline;
     border: 1px solid #ffffff;
@@ -106,8 +110,8 @@ nav.appNav .navLink.hideLink {
 }
 
 nav.appNav .navLink img {
-    width: 0.625rem;
-    height: 0.625rem;
+    width: 8px;
+    height: 8px;
     margin-right: 0.488rem;
 }
 
@@ -116,26 +120,32 @@ nav.appNav .navLink img {
     div.navMenu {
         padding: 2.25rem 4rem;
     }
+
     
     div.navMenu .logoImg {
-        width: 14.938rem;
-        height: 2.625rem;
+        width: 220px;
+        height: 40px;
     }
     
     nav.appNav .navLink {
-        width: 10.625rem;
-        height: 3.063rem;
+        width: 160px;
+        height: 45px;
         font-size: 0.813rem;
         letter-spacing: 0.159rem;
     }
+    
+    nav.appNav .navLink h2 {
+        width: 68px;
+        height: 20px;
+    }    
     
     nav.appNav .margenEntreAzulRosa{
         width: 2.188rem;
     }
     
     nav.appNav .navLink img {
-        width: 1.2rem;
-        height: 1.2rem;
+        width: 13px;
+        height: 13px;
         margin-right: 0.488rem;
     }
 
@@ -143,6 +153,7 @@ nav.appNav .navLink img {
     .navMenuWapperHolder {
         height: 7.559375rem;
         font-size: 0.833vw;
+        font-family: 'Rubik', sans-serif;
     }
 
     div.navMenuWapper.fixed {

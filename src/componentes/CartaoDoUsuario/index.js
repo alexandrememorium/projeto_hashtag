@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 
 function Cartao({ itens }) {
     
-
     useEffect(() => {
         Aos.init({ duration: 2000 })
     }, [])
