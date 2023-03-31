@@ -157,6 +157,15 @@
     opacity: 1; 
     display: flex;  
   }
+
+  .linhas_container_hashtag {
+    top: 388px;
+    left: 17px;
+    width: 382%;
+    height: 0px;
+    border: 1px solid #dadee2;
+    
+  }
     
   .caixa_busca {
     
@@ -175,7 +184,7 @@
   .hashtag {  
     top: 366px;
     left: 242px;
-    width:65%;
+    width:95%;
     height: 29px;    
     color: var(--unnamed-color-292929);
     text-align: left;
@@ -189,7 +198,7 @@
   .data {
    top: 367px;
    left: 1335px;
-   width: 8%;
+   width: 148%;
    height: 28px;
    color: var(--unnamed-color-d842bd);
    text-align: center;
@@ -202,11 +211,11 @@
   .hora {
     top: 367px;
     left: 1556px;
-    width: 22%;
-    height: 28px;
+    width: 180%;
+    height: 93px;
     color: var(--unnamed-color-d842bd);
     text-align: center;
-    font: normal normal normal 24px/84px Rubik;
+    font: normal normal normal 24px/28px Rubik;
     letter-spacing: 0px;
     color: #D842BD;
     opacity: 1;
@@ -221,7 +230,7 @@
   
   }
   
-  @media all and (min-width: 320px) and (max-width: 650px) {
+@media all and (min-width: 320px) and (max-width: 414px) {
     
 
      
@@ -275,6 +284,16 @@
       display: flex;
       align-items: flex-end;
       margin-top: 27px;  
+    }
+
+
+    .linhas_container_hashtag {
+      top: 388px;
+      left: 17px;
+      width: 382%;
+      height: 0px;
+      border: 1px solid #dadee2;
+      
     }
       
     .buscas_realizadas {
@@ -349,7 +368,7 @@
       top: 293px;
       left: 1554px;
       width:19%;
-      height: 51px;
+      height: 50px;
       color: var(--unnamed-color-3633f7);
       text-align: left;
       letter-spacing: NaNpx;
@@ -383,7 +402,7 @@
       top: 218px;
       left: 253px;
       width: 30%;
-      height: 25px;
+      height: 0px;
       color: var(--unnamed-color-3633f7);
       text-align: left;
       font: normal normal medium 17px/20px Rubik;
@@ -391,21 +410,22 @@
       color: #D842BD;
       opacity: 1;
       font: message-box;
+      margin-inline-start: auto;
 
     }
     
     .hora {      
       top: 293px;
       left: 1554px;
-      width: 19%;
+      width: 18%;
       height: 25px;
       color: var(--unnamed-color-3633f7);
-      text-align: left;
       letter-spacing: NaNpx;
       color: #D842BD;
       opacity: 1;
       font: message-box;
+      margin-inline-start: auto;
     }
   
   
-  }    
+}    

@@ -43,7 +43,13 @@ export default function Index() {
         <div className={styles.container_externo_hashtag}>
           {campos.slice(0, 10).map((campo, index) => {
             return (
+              
+              
               <div className={styles.container_hashtag} key={index}>
+               
+               <div className={styles.linhas_container_hashtag}>
+                
+
                 <div className={styles.hashtag}>
                   {campo.hashtag}
                 </div>
@@ -61,7 +67,9 @@ export default function Index() {
                     minute: '2-digit'
                   })}`}
                 </div>
+                </div>
               </div>
+              
             )
           })}
         </div>
