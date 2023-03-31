@@ -94,10 +94,21 @@
    
   }
   
+  /*.container_externo_hashtag{
+    top: 237px;
+    left: 184px;
+    width: 1553px;
+    height: 758px;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 14px;
+    opacity: 1;
+  } */
+
   .container_hashtag {
     top: 237px;
     left: 184px;
-    width: 81%;
+    width: 100%;
     height: 106px;
     background: #F1F1F1 0% 0% no-repeat padding-box;
     border-radius: 14px;
@@ -108,6 +119,13 @@
     
   }
   
+  /*.container_hashtag_interno {  
+    top: 366px;
+    left: 208px;
+    width: 1506px;
+    height: 584px;        
+    opacity: 1; 
+  }  */
   
   .caixa_busca {
     
@@ -233,8 +251,19 @@
       display: flex;
       align-items: center;
       flex-direction: column;
-  }
+    }
     
+    /*.container_externo_hashtag {
+      top: 200px;
+      left: 10px;
+      width: 395px;
+      height: 751px;
+      background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border-radius: 14px;
+      opacity: 1;
+    }*/ 
+
     .container_hashtag {  
       width: 97%;
       height: 49px;
@@ -246,12 +275,18 @@
       margin-top: 27px;
       
     }
-  
-  
+     
+    /*.container_hashtag_interno {  
+      top: 366px;
+      left: 208px;
+      width: 1506px;
+      height: 584px;        
+      opacity: 1; 
+    }  */
     .buscas_realizadas {
       top: 112px;
       left: 58px;
-      width: 60%;
+      width: 65%;
       
       color: var(--unnamed-color-ffffff);
       text-align: left;

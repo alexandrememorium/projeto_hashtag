@@ -6,24 +6,56 @@ import Menu from '../../componentes/Menu';
 
 
 
-export default function index() {
+export default function Index() {
   
-  //const url ="https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?view=Grid%20view&api_key=keykXHtsEPprqdSBF&filterByFormula=Find(%2203-23%22%2C+Squad)"
-
-  //function getUser(){
-    //fetch(`${url}/10`)
-     //.then(response => response.json())
-     //.then(response =>{
-       //  userName.textContent = data.name
-        // userData.textContent = data.data
-        // userHora.textContent = data.hora
-      //})
-     // .catch(error => console.error(error))
+  
+ 
+    fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?view=Grid%20view&api_key=keykXHtsEPprqdSBF&filterByFormula=Find(%2203-23%22%2C+Squad)")
+     .then(response => response.json())
+     .then(res => res.records)
+     .catch(error => console.error(error))
      
+    
+    const records = []; 
 
-  //}
-  //getUser()
-  
+    
+    {
+
+      
+      <header className="container_mostra_busca">
+        
+        {records;slice(0, 10).map((record)  => {})
+       
+          return (
+        
+            <div>
+              <div id='Hashtagname'>
+                <p id="Hashtagnamem" key=record.id />
+              </div>
+                
+        
+              <div className="Createdtime">
+                <p className="time">
+                  <b></b> records.fields.Data
+                </p>
+
+              </div>
+                 
+
+              <div className="Fields">
+                <p className="nome">
+                  <b></b> {fields.name}
+                </p>
+
+              </div>
+            </div>
+            
+          )
+
+        })}
+
+      </header>
+    }
   
   
   
@@ -36,13 +68,14 @@ export default function index() {
       
       <div className={styles.Apptop}>
         
-      </div>
+      </div >
+      <div >
 
       <div className={styles.buscas_realizadas}>
         Buscas realizadas
       </div>
 
-      
+        <div className={styles.container_externo_hashtag}>
 
         <div className={styles.container_hashtag}>
 
@@ -62,7 +95,8 @@ export default function index() {
 
       
       <div className={styles.mostra_busca}>
-
+      </div>
+      </div>
       </div>
 
     </div>
