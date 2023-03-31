@@ -30,7 +30,7 @@ function Carrossel({ itens }) {
                 "--swiper-pagination-bullet-size": "12px"
             }}
         >
-            {itens === null ? '': itens.map((tweet, index) => {
+            {itens === null ? '': itens.slice(0, 10).map((tweet, index) => {
 
                 return (
                     <SwiperSlide key={index} id='slides'>

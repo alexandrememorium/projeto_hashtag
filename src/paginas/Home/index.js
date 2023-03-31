@@ -11,7 +11,7 @@ import image from '../../img/search.png';
 
 function Home() {
 
-    document.title = 'Projeto hashtagfinder';
+    document.title = 'Projeto HashtagFinder';
 
     //busca
     let [itemBusca, setItemBusca] = useState('');
