@@ -10,7 +10,7 @@ export default function Index() {
   
   React.useEffect(() => {
 
-    fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?&pageSize=10&sort%5B0%5D%5Bfield%5D=Data&sort%5B0%5D%5Bdirection%5D=desc&view=Grid%20view&api_key=keykXHtsEPprqdSBF&filterByFormula=Find(%2203-23%22%2C+Squad)%22)"
+    fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?&pageSize=10&sort%5B0%5D%5Bfield%5D=Data&sort%5B0%5D%5Bdirection%5D=desc&view=Grid%20view&api_key=keykXHtsEPprqdSBF&filterByFormula=Find(%2203-23%22%2C+Squad)")
       .then(res => res.json())
       .then(res => setCampos(res.records.map((record) => {
         return {
