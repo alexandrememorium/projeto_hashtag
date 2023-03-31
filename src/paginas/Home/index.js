@@ -11,6 +11,8 @@ import image from '../../img/search.png';
 
 function Home() {
 
+    document.title = 'Projeto hashtagfinder';
+
     //busca
     let [itemBusca, setItemBusca] = useState('');
     let [itemResultado, setItemResultado] = useState('');
