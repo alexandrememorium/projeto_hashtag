@@ -4,12 +4,11 @@ import { SwiperSlide, Swiper } from 'swiper/react'
 import './swiper.css'
 
 function Carrossel({ itens }) {
-
+    
     return (
         <Swiper
             loop={true}
             modules={[Navigation, Pagination]}
-            spaceBetween={15}
             slidesPerView={2}
             pagination={{
                 dynamicBullets: true,
@@ -25,7 +24,6 @@ function Carrossel({ itens }) {
                 },
                 1300: {
                     slidesPerView: 5,
-                    
                 }
             }}
             style={{
