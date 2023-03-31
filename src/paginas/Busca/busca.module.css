@@ -114,26 +114,19 @@
   letter-spacing: NaNpx;
   color: #3633F7;
   opacity: 1;
-
 }
 
-
-
-
-
-  
-  .Apptop {
-    top: 36px;
-    left: 64px;
-    width: 93%;
-    height: 49px;
-    
-    opacity: 1;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 40px 0px 55px 64px;
+.Apptop {
+  top: 36px;
+  left: 64px;
+  width: 93%;
+  height: 49px;    
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 40px 0px 55px 64px;
   }  
   
   
@@ -228,7 +221,7 @@
   
   }
   
-  @media all and (min-width: 320px) and (max-width: 414px) {
+  @media all and (min-width: 320px) and (max-width: 650px) {
     
 
      
@@ -287,26 +280,82 @@
     .buscas_realizadas {
       top: 112px;
       left: 58px;
-      width: 65%; 
+      /*width: 1%;*/ 
       color: var(--unnamed-color-ffffff);
-      text-align: left;
+      text-align:center;
       font: normal normal bold 33px/24px Rubik;
       letter-spacing: 0px;
       color: #FFFFFF;
       opacity: 1;
       font-family: sans-serif;
     }
-  
-    .caixa_busca {
-      top: 112px;
-      left: 58px;
-      width: 96%;    
-      color: var(--unnamed-color-ffffff);
+    
+    .caixa {
+      top: 237px;
+      left: 81%;
+      width: 96%;
+      height: 83%;
+      background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+      background: #F1F1F1 0% 0% no-repeat padding-box;
+      border-radius: 14px;
+      opacity: 1;
+    } 
+    
+
+    .cabecalho {
+      top: 237px;
+      left: 184px;
+      width: 100%;
+      height: 106px;
+      background: #F1F1F1 0% 0% no-repeat padding-box;
+      border-radius: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: x-large;
+      font-weight: 700;
+      opacity: 1;
+    }  
+      
+    .hashtag_cabecalho {
+      top: 0px;
+      left: 0px;
+      width: 59%;
+      height: 51px;
+      color: var(--unnamed-color-3633f7);
       text-align: left;
-      font: normal normal bold 17px/24px Rubik;
+      font: normal normal medium 24px/28px Rubik;
       letter-spacing: 0px;
-      color: #FFFFFF;
-      opacity: 1;    
+      margin-left: auto;
+      color: #3633F7;
+      font-size: smaller;
+    }
+    
+    .data_cabecalho {
+      top: 293px;
+      left: 1338px;
+      width: 16%;
+      height: 51px;
+      color: var(--unnamed-color-3633f7);
+      text-align: left;
+      letter-spacing: NaNpx;
+      color: #3633F7;
+      opacity: 1;
+      font-size: smaller;
+    
+    }
+    
+    .hora_cabecalho {
+      top: 293px;
+      left: 1554px;
+      width:19%;
+      height: 51px;
+      color: var(--unnamed-color-3633f7);
+      text-align: left;
+      letter-spacing: NaNpx;
+      color: #3633F7;
+      opacity: 1;
+      font-size: smaller;
     }
     
     .mostra_busca    {    
@@ -324,10 +373,10 @@
       color: var(--unnamed-color-3633f7);
       text-align: left;
       letter-spacing: NaNpx;
-      color: #3633F7;
+      color: #292929;
       opacity: 1;
       margin-left: 25px;
-      font-weight: 800;
+      font: message-box;
     }  
   
     .data {
@@ -339,9 +388,9 @@
       text-align: left;
       font: normal normal medium 17px/20px Rubik;
       letter-spacing: 0px;
-      color: #3633F7;
+      color: #D842BD;
       opacity: 1;
-      font-weight: 800;
+      font: message-box;
 
     }
     
@@ -353,10 +402,9 @@
       color: var(--unnamed-color-3633f7);
       text-align: left;
       letter-spacing: NaNpx;
-      color: #3633F7;
+      color: #D842BD;
       opacity: 1;
-      font-weight: 800;
-      font-size: small;
+      font: message-box;
     }
   
   
