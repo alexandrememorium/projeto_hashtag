@@ -27,17 +27,14 @@ export default function Index() {
 
       <Menu headerHeightMobile={12.5} headerHeightDesktop={39.25} />
 
-      <div className={styles.Apptop}>
-
-      </div >
       <div className={styles.buscas_realizadas}>
         Buscas realizadas
       </div>
     <div className={styles.caixa}>
       <div className={styles.cabecalho}>        
-        <div className={styles.hashtag_cabecalho}>Hashtag</div>
-        <div className={styles.data_cabecalho}>Data</div>
-        <div className={styles.hora_cabecalho}>Hora</div>       
+        <p className={styles.hashtag_cabecalho}>Hashtag</p>
+        <p className={styles.data_cabecalho}>Data</p>
+        <p className={styles.hora_cabecalho}>Hora</p>       
       </div>
 
         <div className={styles.container_externo_hashtag}>
@@ -47,7 +44,7 @@ export default function Index() {
               
               <div className={styles.container_hashtag} key={index}>
                
-               <div className={styles.linhas_container_hashtag}>
+               
                 
 
                 <div className={styles.hashtag}>
@@ -67,7 +64,7 @@ export default function Index() {
                     minute: '2-digit'
                   })}`}
                 </div>
-                </div>
+                
               </div>
               
             )

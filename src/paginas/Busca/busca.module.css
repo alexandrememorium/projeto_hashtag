@@ -15,23 +15,13 @@
   padding: auto;
 }
 
-.fundoPag .loginPageContainer {
-  width: 33.313rem;
-  height: 38rem;
-  border-radius: 0.875rem;
-  margin-top: 6.8rem;
-  margin-right: 0.9rem;
-  box-shadow: 0 0 0.625rem rgb(0 0 0 / 20%);
-  background: #fff;
-  color: rgb(99, 12, 212);
-}
-
 .caixa {
   width: 81%;
   height: 83%;
   background: #F1F1F1 0% 0% no-repeat padding-box;
   border-radius: 14px;
   opacity: 1;
+  margin: auto;
 }
 
 .cabecalho {
@@ -47,8 +37,7 @@
 }
 
 .hashtag_cabecalho {
-  width: 67%;
-  height: 51px;
+  width: 50%;
   text-align: left;
   font-size: 34px;
   margin-left: auto;
@@ -57,15 +46,12 @@
 }
 
 .data_cabecalho {
-  width: 16%;
-  height: 51px;
+  width: 20%;
   text-align: left;
   color: #3633F7;
 }
 
 .hora_cabecalho {
-  width: 12%;
-  height: 51px;
   text-align: left;
   color: #3633F7;
 }
@@ -86,85 +72,45 @@
   height: 85px;
   text-align: left;
   font-size: 40px;
-  letter-spacing: 0px;
   color: #FFFFFF;
-  opacity: 1;
 }
 
 .container_hashtag {
   width: 100%;
-  height: 100px;
+  height: 55px;
   background-color: #FFFFFF;
-  border-radius: 14px;
-  opacity: 1;
   display: flex;
-}
-
-.linhas_container_hashtag {
-  width: 382%;
-  height: 0px;
-  border: 1px solid #dadee2;
-
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #41558e40;
 }
 
 .hashtag {
-  width: 95%;
-  height: 29px;
-  color: var(--unnamed-color-292929);
+  width: 50%;
   text-align: left;
-  font: normal normal normal 24px/84px Montserrat;
-  letter-spacing: 0px;
+  font-size: 24px;
   color: #292929;
-  margin-left: auto;
   opacity: 1;
 }
 
 .data {
-  width: 148%;
-  height: 28px;
   text-align: center;
   font-size: 24px;
-  letter-spacing: 0px;
   color: #D842BD;
 }
 
 .hora {
-  width: 18%;
-  height: 93px;
   font-size: 24px;
   text-align: center;
-  letter-spacing: 0px;
   color: #D842BD;
   opacity: 1;
 }
 
 
-/*.mostra_busca {
-  
-
-}*/
-
 @media all and (min-width: 320px) and (max-width: 768px) {
 
-
-
-  .div.navMenu {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 99%;
-    padding: 2rem 1rem;
-    z-index: 25;
-    margin: 0px 0px 0px 0px;
-  }
-
   .Apptop {
-
-    top: 0px;
-    left: 0px;
-    width: 414px;
+    width: 320px;
     height: 28px;
     opacity: 1;
   }
@@ -173,90 +119,54 @@
     background-image: url("../../img/login-bg.jpg");
     background-image: no-repeat;
     background-size: cover;
-    width: 100vw;
+    height: 100vh;
     padding:auto;  
   }
 
-
-  .busca_fundoPag__bgOlG {
-    background-image: url(http://localhost:3000/static/media/login-bg.f2411a5….jpg);
-    background-image: no-repeat;
-    background-size: cover;
-    width: 1117px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .container_hashtag {
-    width: 97%;
-    height: 49px;
-    background: #F1F1F1 0% 0% no-repeat padding-box;
-    border-radius: 14px;
+  /*.container_hashtag {
+    width: 100%;
+    height: 39px;
+    background-color: #F1F1F1;
     opacity: 1;
     display: flex;
-    align-items: flex-end;
-    margin-top: 27px;
-  }
+    justify-content: space-around;
+    border-bottom: 1px solid #41558e40  ;
+    padding: 0px 15px;
 
+  }*/
 
-  .linhas_container_hashtag {
-    top: 388px;
-    left: 17px;
-    width: 382%;
-    height: 0px;
-    border: 1px solid #dadee2;
-
-  }
-
-  .buscas_realizadas {
-    top: 112px;
-    left: 58px;
-    /*width: 1%;*/
-    color: var(--unnamed-color-ffffff);
+  .buscas_realizadas {   
     text-align: center;
-    font: normal normal bold 33px/24px Rubik;
+    font-size: 24px;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
-    font-family: sans-serif;
   }
 
   .caixa {
-    top: 237px;
-    left: 81%;
     width: 96%;
     height: 83%;
     background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
     background: #F1F1F1 0% 0% no-repeat padding-box;
     border-radius: 14px;
-    opacity: 1;
   }
-
-
+   
   .cabecalho {
-    top: 237px;
-    left: 184px;
     width: 100%;
-    height: 106px;
-    background: #F1F1F1 0% 0% no-repeat padding-box;
+    height: 50px;
+    background-color: #F1F1F1;
     border-radius: 14px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-end;
     font-size: x-large;
-    font-weight: 700;
-    opacity: 1;
+    font-weight: 700; 
   }
 
   .hashtag_cabecalho {
-    top: 0px;
-    left: 0px;
-    width: 59%;
-    height: 51px;
-    color: var(--unnamed-color-3633f7);
+    width: 50%;
     text-align: left;
-    font: normal normal medium 24px/28px Rubik;
+    font-size: 24px;
     letter-spacing: 0px;
     margin-left: auto;
     color: #3633F7;
@@ -264,81 +174,39 @@
   }
 
   .data_cabecalho {
-    top: 293px;
-    left: 1338px;
-    width: 16%;
-    height: 51px;
-    color: var(--unnamed-color-3633f7);
+    width: 20%;
     text-align: left;
-    letter-spacing: NaNpx;
     color: #3633F7;
-    opacity: 1;
     font-size: smaller;
-
   }
 
   .hora_cabecalho {
-    top: 293px;
-    left: 1554px;
-    width: 19%;
-    height: 50px;
-    color: var(--unnamed-color-3633f7);
     text-align: left;
-    letter-spacing: NaNpx;
     color: #3633F7;
-    opacity: 1;
     font-size: smaller;
-  }
-
-  .mostra_busca {
-    top: 366px;
-    left: 208px;
-    width: 1506px;
-    opacity: 1;
-  }
+  } 
 
   .hashtag {
-    top: 218px;
-    left: 29px;
-    width: 80%;
-    height: 25px;
-    color: var(--unnamed-color-3633f7);
+    width: 50%;
     text-align: left;
-    letter-spacing: NaNpx;
     color: #292929;
     opacity: 1;
-    margin-left: 25px;
-    font: message-box;
+    font-size: 16px;
   }
 
   .data {
-    top: 218px;
-    left: 253px;
-    width: 30%;
-    height: 0px;
-    color: var(--unnamed-color-3633f7);
+    width: 20%;
     text-align: left;
-    font: normal normal medium 17px/20px Rubik;
-    letter-spacing: 0px;
+    font-size: 16px;
     color: #D842BD;
     opacity: 1;
-    font: message-box;
-    margin-inline-start: auto;
 
   }
 
   .hora {
-    top: 293px;
-    left: 1554px;
-    width: 18%;
-    height: 25px;
-    color: var(--unnamed-color-3633f7);
-    letter-spacing: NaNpx;
     color: #D842BD;
     opacity: 1;
-    font: message-box;
-    margin-inline-start: auto;
+    font-size: 16px;
   }
-
 
 }
