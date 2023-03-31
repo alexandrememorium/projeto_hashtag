@@ -9,7 +9,7 @@ import styles from './Login.module.css';
 import Menu from '../../componentes/Menu';
 
 export default function Login() {
-  document.title = 'Projeto hashtagfinder - Login';
+  document.title = 'Projeto HashtagFinder - Login';
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
