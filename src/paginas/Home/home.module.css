@@ -26,6 +26,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 3.865vw;
 }
 
 .header h1 {
@@ -54,12 +55,13 @@ p {
     background-color: #fff;
 }
 
-@media screen and (min-width: 481px){
+@media screen and (min-width: 481px) {
     .header {
         height: 520px;
         background-image: url("../../img/hero-bg.jpg");
         align-items: flex-start;
         margin-bottom: 120px;
+        font-size: 0.833vw;
     }
 
     .header h1 {
@@ -85,23 +87,24 @@ p {
     }
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
     .header {
         height: 660px;
         margin-bottom: 240px;
+        font-size: 1.25vw;
     }
 
     .header h1 {
-        font-size: 4em;
+        font-size: 3em;
     }
 
     .header p {
-        font-size: 1.5em;
+        font-size: 1em;
     }
 
     .header input {
         top: 615px;
-        font-size: 2em;
+        font-size: 1.5em;
         padding-left: 100px;
     }
 }
@@ -110,7 +113,7 @@ p {
 
 .body {
     padding: 0px 0px;
-    font-size: 16px;
+    font-size: 20px;
     padding: 0px 5vw;
 }
 
@@ -119,6 +122,15 @@ p {
     font-size: 1.5em;
     margin: 54px 0px 32px 0px;
     text-align: center;
+}
+
+.error {
+    color: #3634F7;
+    text-align: center;
+}
+
+.error>img {
+    width: 9em;
 }
 
 .carrosselContainer {
@@ -134,14 +146,28 @@ p {
     .body h2 {
         margin: 54px 0px 75px 0px;
     }
+
+    .error {
+        position: relative;
+        bottom: 2em;
+    }
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
     .body {
         font-size: 25px;
     }
 
     .body h2 {
         margin: 54px 0px 125px 0px;
+    }
+    
+    .error {
+        position: relative;
+        bottom: 6em;
+    }
+
+    .error > img {
+        width: 12em;
     }
 }

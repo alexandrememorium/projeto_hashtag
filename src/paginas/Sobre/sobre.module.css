@@ -166,14 +166,28 @@
   
   /* Responsividade - Tela de 1112 pixels */
   @media screen and (max-width: 1112px) {
+
+        .tituloTexto{
+          font-size: 3em;
+        }
+
+    .subtituloTexto {
+      font-size: 3em;
+    }
+
     .artigo {
       grid-template-columns: 1fr;
-      margin-top: 120px;
+      margin-top: 60px;
     }
   
     .blocoParagrafoTexto {
-      font-size: 1.36em;
+      font-size: 1.5em;
     }
+
+    .subtitulo2Texto{
+      font-size: 3em;
+    }
+    
   }
   
   /* Responsividade - Tela de 720 pixels */
@@ -189,8 +203,8 @@
   
     .tituloTexto {
       font-size: 3em;
-      text-align: center;
-      margin: 0px;
+      /*text-align: center;*/
+      /*margin: 0px;*/
     }
   
     .subtitulo2Texto {
@@ -199,7 +213,87 @@
   }
   
   /* Responsividade - Tela entre 350 a 650 pixels */
-  @media screen and (min-width: 350px) and (max-width: 600px) {
+  @media screen and (min-width: 480px) and (max-width: 600px) {
+    .fundo {
+      height: 206px;
+      background: url(../../img/about-bg.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  
+    .titulo {
+      padding-top: 114px;
+    }
+  
+    .tituloTexto {
+      /*font-size: 3em;*/
+      text-align: center;
+      margin: 0px;
+    }
+  
+    .artigo {
+      flex-direction: column;
+      margin: 55px auto auto;
+      
+    }
+  
+    .blocoParagrafoTexto {
+      font-size: 1em;
+    }
+  
+    .subtituloTexto {
+      font-size: 3em;
+    }
+  
+    .subtitulo2Texto {
+      color: blue;
+      font-size: 3em;
+      margin-bottom: 46px;
+      margin-left: 36px;
+    }
+  
+    .quemSomos {
+      margin-top: 112px;
+    }
+  
+    .containerGeral {
+      gap: 20px 199px;
+      margin-bottom: 74px;
+    }
+  
+    .container {
+      width: 87%;
+    }
+  
+    .containerCartaoMembros {
+      padding: 36px;
+    }
+  
+    .containerMembros {
+      min-height: 471px;
+    }
+  
+    .membroFoto {
+      width: 182px;
+      height: 182px;
+    }
+  
+    .informacaoMembrosTitulo {
+      font-size: 1.75em;
+      margin: 22px 0px;
+    }
+  
+    .informacaoMembrosTexto {
+      font-size: 1.18em;
+    }
+  
+    .containerIcones img {
+      padding: 0px 15px;
+    }
+  }
+
+   /* Responsividade - Tela entre 350 a 650 pixels */
+   @media screen and (max-width: 480px) {
     .fundo {
       height: 206px;
       background: url(../../img/about-bg.jpg);

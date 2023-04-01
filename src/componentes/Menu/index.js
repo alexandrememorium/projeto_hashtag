@@ -18,8 +18,10 @@ export default class Menu extends React.Component {
     displayLogoutButton: false,
 
     transparencyMenu: false,
-    getHeaderHeight: null
+    getHeaderHeight: null,
+    stateBotao: true
   }
+
 
   componentDidMount() {
     this.addTransparencyScrollEvent();
@@ -38,6 +40,12 @@ export default class Menu extends React.Component {
           if (window.location.pathname === '/Busca') {
             this.setState({ displayHomeButton: true, displayLogoutButton: true });
           }
+
+          if(localStorage.getItem('logado') === 'true'){
+            this.setState({ stateBotao: false});
+          }
+
+                  
   }
 
   setHeaderHeight = () => {
@@ -77,8 +85,10 @@ export default class Menu extends React.Component {
         <div className={"navMenuWapper " + (this.state.transparencyMenu ? 'fixed' : '')}>
           <div className={(this.state.transparencyMenu ? 'transpRolagem' : '')}></div>
           <div className={"navMenu " + (this.state.transparencyMenu ? 'transpWidth' : '')}>
+          <NavLink exact to="/">
             <Logo className={"logoImg " + (this.state.transparencyMenu ? 'hide' : '')} />
             <LogoPink className={"logoImg " + (this.state.transparencyMenu ? '' : 'hide')} />
+            </NavLink>
             <nav className="appNav">
               <NavLink exact to="/" className={`navLink ${this.state.displayHomeButton ? '' : 'hideLink'}`} activeClassName="AppLinkCurrentPage" >
                 <img src={HomeIcon} alt="Home Icon" />
@@ -91,7 +101,7 @@ export default class Menu extends React.Component {
               <div className="margenEntreAzulRosa"></div>
               <NavLink exact to="/Login" className={`navLink linkAzul ${this.state.displayLoginButton ? '' : 'hideLink'}`} activeClassName="AppLinkCurrentPage" >
                 <img src={LoginIcon} alt="Login Icon" />
-                <h2>Login</h2>
+                <h2>{`${this.state.stateBotao ? 'Login' : 'Busca'}`}</h2>
               </NavLink>
               <NavLink exact to="/" className={`navLink linkAzul ${this.state.displayLogoutButton ? '' : 'hideLink'}`} onClick={() => this.logout()} activeClassName="AppLinkCurrentPage" >
                 <img src={LogoutIcon} alt="Sair Icon" />

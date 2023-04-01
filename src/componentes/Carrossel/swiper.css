@@ -30,13 +30,15 @@
 }
 
 .carrosselConteudo img {
-    width: 160px;
-    height: 230px;
+    width: 150px;
+    height: 228px;
     border-radius: 21px;
+    object-fit: cover;
+    /* overflow: hidden; */
 }
 
 @media screen and (max-width: 768px) {
-    
+
     .swiper-slide {
         width: 160px !important;
         height: 230px;
@@ -52,7 +54,7 @@
     .swiper-wrapper {
         position: unset;
     }
-    
+
     .swiper-button-next,
     .swiper-button-prev {
         opacity: 1!important;
@@ -66,7 +68,8 @@
         border-radius: 30px;
     }
 
-    .swiper-button-next::after, .swiper-button-prev::after {
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
         line-height: 1.45;
         color: #5538EE42;
     }
@@ -97,8 +100,8 @@
     }
 
     .carrosselConteudo img {
-        height: 287px;
-        width: 287px;
+        height: 290px;
+        width: 215px;
     }
 
     .carrosselConteudo p {

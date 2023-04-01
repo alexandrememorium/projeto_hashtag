@@ -1,5 +1,6 @@
-.fundoPag * {
+.fundoPag {
   font-family: 'Rubik', sans-serif;
+  font-size: 0,8px;
   margin: 0;
   padding: 0;
   outline: none;
@@ -42,11 +43,11 @@
 }
 
 .fundoPag .paginaLogin {
-  width: 33.313rem;
-  height: 38rem;
+  width: 450px;
+  height: 510px;
   border-radius: 0.875rem;
   margin-top: 6.8rem;
-  margin-right: 0.9rem;
+  /*margin-right: 0.9rem;*/
   box-shadow: 0 0 0.625rem rgb(0 0 0 / 20%);
   background: #fff;
   color: rgb(99, 12, 212);
@@ -56,7 +57,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 4.125rem;
+  margin-top: 3px;
 }
 
 .paginaLogin form input {
@@ -66,7 +67,7 @@
   border-left: none;
   border-right: none;
   padding: 0 0.313rem;
-  width: 28.553rem;
+  width: 24.553rem;
   margin-top: 1.563rem;
 }
 
@@ -78,36 +79,64 @@
   color: #3634F7;
   margin-top: 4.125rem;
   margin-bottom: 2.438rem;
+  width: 100px;
+  height: 43px;
 }
 
 /* responsivo - media query */
 
 @media all and (min-width: 320px) and (max-width: 414px) {
+  .fundoPag .paginaLogin  {
+    font-size: 3,8px;  /*com base na proporção de 16px para o tamanho da tela de layout especificado de 1920, isso mudará o valor padrão da unidade rem da sua página*/
+  }
+
   .fundoPag .paginaLogin {
-    width: 21.25rem;
-    height: 28.75rem;
+    width: 318px;
+    height: 500px;
+    font-size: 3,8px;
   }
 
   .paginaLogin form input {
-    width: 20rem;
+    width: 18rem;
   }
 
   .paginaLogin form h1 {
-    margin-top: 0.125rem;
+    width: 97px;
+    height: 42px;
   }
 }
 
 @media all and (min-width: 415px) and (max-width: 768px) {
+
   .fundoPag .paginaLogin {
-    width: 22.313rem;
-    height: 29rem;
+    width: 380px;
+    height: 500px;
+    font-size: 2,2px;
   }
 
   .paginaLogin form input {
-    width: 19.553rem;
+    width: 19rem;
   }
 
   .paginaLogin form {
     margin-top: 0;
   }
+
+  .paginaLogin form h1 {
+    width: 95px;
+    height: 41px;
+  }
+}
+
+@media all and (min-width: 769px) and (max-width: 1150px) {
+  .fundoPag .paginaLogin {
+    width: 450px;
+    height: 510px;
+    font-size: 1,2px;  /*com base na proporção de 16px para o tamanho da tela de layout especificado de 1920, isso mudará o valor padrão da unidade rem da sua página*/
+  }
+
+  .paginaLogin form h1 {
+    width: 100px;
+    height: 43px;
+  }  
 }

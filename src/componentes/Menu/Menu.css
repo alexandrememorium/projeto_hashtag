@@ -1,11 +1,6 @@
-html {
-    font-size: 3.865vw; /*com base na proporção de 16px para o tamanho de tela de layout especificado de 414, isso mudará o valor padrão da unidade rem da sua página*/
-}
-
 div.navMenu {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     /*width: 100%;*/
@@ -15,6 +10,8 @@ div.navMenu {
 
 .navMenuWapperHolder {
     position: absolute;
+    font-size: 3.865vw;
+    font-family: 'Rubik', sans-serif;
 }
 
 .hide {
@@ -62,27 +59,25 @@ div.navMenuWapper div.transpRolagem {
 /* fim Menu transparente*/
 
 div.navMenu .logoImg {
-    width: 8.125rem;
-    height: 1.438rem;
+    width: 130px;
+    height: 23px;
     
 }
 
 div.navMenu nav.appNav {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
 
 }
 
 nav.appNav .navLink {
-    width: 6.625rem;
-    height: 1.875rem;
+    width: 106px;
+    height: 30px;
     background-color: #D842BD;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     font-size: 0.438rem;
@@ -93,7 +88,10 @@ nav.appNav .navLink {
     text-decoration: none;
     cursor: pointer;
 }
-
+nav.appNav .navLink h2 {
+    width: 40px;
+    height: 12px;
+}
 nav.appNav .navLink:hover {
     text-decoration: underline;
     border: 1px solid #ffffff;
@@ -112,45 +110,50 @@ nav.appNav .navLink.hideLink {
 }
 
 nav.appNav .navLink img {
-    width: 0.625rem;
-    height: 0.625rem;
+    width: 8px;
+    height: 8px;
     margin-right: 0.488rem;
 }
 
-@media screen and (min-width: 481px){
-    html {
-        font-size: 0.833vw; /*com base na proporção de 16px para o tamanho da tela de layout especificado de 1920, isso mudará o valor padrão da unidade rem da sua página*/
-    }
+@media screen and (min-width: 768px){
 
     div.navMenu {
         padding: 2.25rem 4rem;
     }
+
     
     div.navMenu .logoImg {
-        width: 14.938rem;
-        height: 2.625rem;
+        width: 220px;
+        height: 40px;
     }
     
     nav.appNav .navLink {
-        width: 10.625rem;
-        height: 3.063rem;
+        width: 160px;
+        height: 45px;
         font-size: 0.813rem;
         letter-spacing: 0.159rem;
     }
+    
+    nav.appNav .navLink h2 {
+        width: 68px;
+        height: 20px;
+    }    
     
     nav.appNav .margenEntreAzulRosa{
         width: 2.188rem;
     }
     
     nav.appNav .navLink img {
-        width: 1.2rem;
-        height: 1.2rem;
+        width: 13px;
+        height: 13px;
         margin-right: 0.488rem;
     }
 
     /* Menu transparente*/
     .navMenuWapperHolder {
         height: 7.559375rem;
+        font-size: 0.833vw;
+        font-family: 'Rubik', sans-serif;
     }
 
     div.navMenuWapper.fixed {
