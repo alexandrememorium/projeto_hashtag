@@ -37,7 +37,11 @@ export default function Index() {
         <p className={styles.hora_cabecalho}>Hora</p>       
       </div>
 
-        <div className={styles.container_externo_hashtag}>
+        <div style={{
+           padding:'0px 20px',
+           textTransform:'lowercase'
+        }}>
+        <section className={styles.teste}>  
           {campos.slice(0, 10).map((campo, index) => {
             return (
               
@@ -48,7 +52,7 @@ export default function Index() {
                 
 
                 <div className={styles.hashtag}>
-                  {campo.hashtag}
+                  #{campo.hashtag}
                 </div>
 
                 <div className={styles.data}>
@@ -69,6 +73,7 @@ export default function Index() {
               
             )
           })}
+          </section>
         </div>
         <div className={styles.mostra_busca}>
 
