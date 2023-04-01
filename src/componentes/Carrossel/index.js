@@ -5,6 +5,8 @@ import './swiper.css'
 
 function Carrossel({ itens }) {
     
+    
+
     return (
         <Swiper
             loop={true}
@@ -29,7 +31,7 @@ function Carrossel({ itens }) {
                 "--swiper-pagination-bullet-size": "12px"
             }}
         >
-            {itens === null ? '': itens.map((tweet, index) => {
+            {itens.map((tweet, index) => {
 
                 return (
                     <SwiperSlide key={index} id='slides'>
