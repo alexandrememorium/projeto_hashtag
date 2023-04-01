@@ -5,14 +5,15 @@ import './swiper.css'
 
 function Carrossel({ itens }) {
     
+    
+
     return (
         <Swiper
             loop={true}
             modules={[Navigation, Pagination]}
             slidesPerView={2}
             pagination={{
-                dynamicBullets: true,
-                dynamicMainBullets: 2
+                dynamicBullets: true
             }}
             navigation={true}
             breakpoints={{
@@ -30,7 +31,7 @@ function Carrossel({ itens }) {
                 "--swiper-pagination-bullet-size": "12px"
             }}
         >
-            {itens === null ? '': itens.map((tweet, index) => {
+            {itens.map((tweet, index) => {
 
                 return (
                     <SwiperSlide key={index} id='slides'>

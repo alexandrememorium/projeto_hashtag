@@ -1,9 +1,9 @@
-.fundoPag * {
-  font-family: 'Rubik', sans-serif;
-  margin: 0;
-  padding: 0;
-  outline: none;
-  box-sizing: border-box;
+.fundoPagBusca {
+    background-image: url(../../img/login-bg.jpg);
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    font-family: 'Rubik', sans-serif;    
 }
 
 .fundoPag {
