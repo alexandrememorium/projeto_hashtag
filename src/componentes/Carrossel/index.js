@@ -11,8 +11,7 @@ function Carrossel({ itens }) {
             modules={[Navigation, Pagination]}
             slidesPerView={2}
             pagination={{
-                dynamicBullets: true,
-                dynamicMainBullets: 2
+                dynamicBullets: true
             }}
             navigation={true}
             breakpoints={{
