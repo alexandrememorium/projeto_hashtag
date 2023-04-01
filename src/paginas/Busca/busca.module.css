@@ -15,64 +15,52 @@
   padding: auto;
 }
 
+.buscas_realizadas {
+  width: 81%;
+  text-align: left;
+  font-size: 40px;
+  padding: 150px 0px 100px 0px;
+  margin: auto;
+  color: #FFFFFF;
+}
+
 .caixa {
   width: 81%;
-  height: 83%;
-  background: #F1F1F1 0% 0% no-repeat padding-box;
   border-radius: 14px;
-  opacity: 1;
   margin: auto;
+  padding-bottom: 10px;
+  background-color: #FFFFFF;
 }
 
 .cabecalho {
-  width: 100%;
   height: 106px;
   border-radius: 14px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: space-around;
+  align-items: center;
   font-size: x-large;
   font-weight: 700;
-  opacity: 1;
+  padding: 0px 20px;
+  background-color: #F1F1F1;
 }
 
 .hashtag_cabecalho {
   width: 50%;
   text-align: left;
   font-size: 34px;
-  margin-left: auto;
   color: #3633F7;
-
 }
 
 .data_cabecalho {
-  width: 20%;
-  text-align: left;
+  width: 10%;
+  text-align: right;
   color: #3633F7;
 }
 
 .hora_cabecalho {
-  text-align: left;
+  width: 10%;
+  text-align: right;
   color: #3633F7;
-}
-
-.Apptop {
-  width: 93%;
-  height: 49px;
-  opacity: 1;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 40px 0px 55px 64px;
-}
-
-.buscas_realizadas {
-  width: 81%;
-  height: 85px;
-  text-align: left;
-  font-size: 40px;
-  color: #FFFFFF;
 }
 
 .container_hashtag {
@@ -85,6 +73,10 @@
   border-bottom: 1px solid #41558e40;
 }
 
+.container_hashtag:last-child{
+  border: none;
+}
+
 .hashtag {
   width: 50%;
   text-align: left;
@@ -94,14 +86,16 @@
 }
 
 .data {
-  text-align: center;
+  width: 10%;
+  text-align: right;
   font-size: 24px;
   color: #D842BD;
 }
 
 .hora {
+  width: 10%;
   font-size: 24px;
-  text-align: center;
+  text-align: right;
   color: #D842BD;
   opacity: 1;
 }
@@ -109,104 +103,43 @@
 
 @media all and (min-width: 320px) and (max-width: 768px) {
 
-  .Apptop {
-    width: 320px;
-    height: 28px;
-    opacity: 1;
-  }
-
-  .fundoPag {
-    background-image: url("../../img/login-bg.jpg");
-    background-image: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    padding:auto;  
-  }
-
-  /*.container_hashtag {
-    width: 100%;
-    height: 39px;
-    background-color: #F1F1F1;
-    opacity: 1;
-    display: flex;
-    justify-content: space-around;
-    border-bottom: 1px solid #41558e40  ;
-    padding: 0px 15px;
-
-  }*/
-
-  .buscas_realizadas {   
+  .buscas_realizadas {
     text-align: center;
-    font-size: 24px;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;
+    font-size: 33px;
+    font-weight: 700;
+    padding: 100px 0px 50px 0px;
+  }
+
+  .cabecalho {
+    height: 50px;
   }
 
   .caixa {
     width: 96%;
-    height: 83%;
-    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
-    background: #F1F1F1 0% 0% no-repeat padding-box;
-    border-radius: 14px;
-  }
-   
-  .cabecalho {
-    width: 100%;
-    height: 50px;
-    background-color: #F1F1F1;
-    border-radius: 14px;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    font-size: x-large;
-    font-weight: 700; 
   }
 
   .hashtag_cabecalho {
-    width: 50%;
-    text-align: left;
-    font-size: 24px;
-    letter-spacing: 0px;
-    margin-left: auto;
-    color: #3633F7;
-    font-size: smaller;
+    font-size: 17px;
   }
 
   .data_cabecalho {
-    width: 20%;
-    text-align: left;
-    color: #3633F7;
-    font-size: smaller;
+    font-size: 17px;
   }
 
   .hora_cabecalho {
-    text-align: left;
-    color: #3633F7;
-    font-size: smaller;
-  } 
+   font-size: 17px;
+  }
 
   .hashtag {
-    width: 50%;
-    text-align: left;
-    color: #292929;
-    opacity: 1;
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .data {
-    width: 20%;
-    text-align: left;
-    font-size: 16px;
-    color: #D842BD;
-    opacity: 1;
-
+    font-size: 14px;
   }
 
   .hora {
-    color: #D842BD;
-    opacity: 1;
-    font-size: 16px;
+    font-size: 14px;
   }
 
 }
