@@ -1,11 +1,6 @@
 
-<<<<<<< HEAD
-import React from 'react'
-import {Redirect} from 'react-router-dom';
-=======
 import React, { useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
->>>>>>> desenvolvimento
 import styles from './busca.module.css';
 import Menu from '../../componentes/Menu';
 import Aos from 'aos';
@@ -66,34 +61,11 @@ export default function Index() {
     return () => observadorEndPoint.disconnect();
   }, [pagina])
 
-<<<<<<< HEAD
-
-export default function Busca() {
-
-  let redirecionaBusca = false;
-
-    if(localStorage.getItem('logado') === 'true'){
-      redirecionaBusca = true;
-    }
-
-  return (
-    
-    <div className={styles.fundoPag}>
-
-      { redirecionaBusca === false ? <Redirect to="/" /> : '' } 
-
-      <Menu headerHeightMobile={12.5} headerHeightDesktop={39.25}/>
-      
-      <div className={styles.Apptop}>
-        
-      </div>
-=======
   return (
 
     <div className={styles.fundoPag}>
       {redirecionaBusca === false ? <Redirect to="/" /> : ''}
       <Menu headerHeightMobile={12.5} headerHeightDesktop={39.25} />
->>>>>>> desenvolvimento
 
       <div className={styles.buscas_realizadas}>
         Buscas realizadas
