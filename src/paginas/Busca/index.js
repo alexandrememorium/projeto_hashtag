@@ -23,7 +23,7 @@ export default function Index() {
    
   return (
      
-    <div className={styles.fundoPag}>
+    <div className={styles.fundoPagB}>
 
       <Menu headerHeightMobile={12.5} headerHeightDesktop={39.25} />
 
