@@ -5,16 +5,6 @@ import Carrossel from '../../componentes/Carrossel';
 import Menu from '../../componentes/Menu/';
 import Rodape from '../../componentes/Rodape'
 import Cartao from '../../componentes/CartaoDoUsuario';
-<<<<<<< HEAD
-
-function Home() {
-
-    const itens = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-    //busca
-    const [itemBusca, setItemBusca] = useState('');
-    /*console.log(itemBusca)*/
-=======
 import conectaAPI from '../../componentes/TwitterAPI/index.js'
 import styles from './home.module.css';
 import imagem from '../../img/search.png';
@@ -30,7 +20,6 @@ function Home() {
     const [valor, setValor] = useState(null);
     const [erro, setErro] = useState('');
     const [carregando, setCarregando] = useState(true);
->>>>>>> desenvolvimento
 
     var myHeaders = new Headers();
     myHeaders.append("content-type", "application/json");
@@ -41,13 +30,8 @@ function Home() {
             {
                 "fields": {
                     "Squad": "03-23",
-<<<<<<< HEAD
-                    "Hashtag": {itemBusca},
-                    "Data": 123123
-=======
                     "Hashtag": itemBusca,
                     "Data": Date.now()
->>>>>>> desenvolvimento
                 }
             }
         ]
@@ -55,19 +39,6 @@ function Home() {
 
     function handleKeyPress(e) {
         var key = e.key;
-<<<<<<< HEAD
-        if (key === "Enter") {
-            console.log('você apertou enter')
-            fetch('https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?view=Grid%20view&api_key=keykXHtsEPprqdSBF&filterByFormula=Find(%2203-23%22%2C+Squad)', {
-                method: 'POST',
-                headers: myHeaders,
-                body: raw,
-                redirect: 'follow'
-            })
-        }
-    }
-
-=======
 
         if (key === "Enter") {
             if (itemBusca !== '') {
@@ -101,7 +72,6 @@ function Home() {
 
     }
     
->>>>>>> desenvolvimento
     return (
         <section>
 
@@ -112,15 +82,6 @@ function Home() {
             <div className={styles.header}>
                 <h1>Encontre hashtags<br></br> de maneira fácil</h1>
                 <p>Digite o que deseja no campo de buscas e<br></br> confira os resultados do Twitter abaixo</p>
-<<<<<<< HEAD
-                <input 
-                    type={Text} 
-                    name={'Busca'} 
-                    placeholder={'Buscar...'}
-                    onChange={itemBusca => setItemBusca(itemBusca.target.value)}
-                    value={itemBusca}
-                    onKeyPress={(e) => handleKeyPress(e)}
-=======
                 <input
                     type={'text'}
                     name={'Busca'}
@@ -129,7 +90,6 @@ function Home() {
                     value={itemBusca}
                     onKeyDown={(e) => handleKeyPress(e)}
                     maxLength="20"
->>>>>>> desenvolvimento
                     required
                 ></input>
             </div>
@@ -148,14 +108,7 @@ function Home() {
 
                     <Cartao itens={valor} />
                 </div>
-<<<<<<< HEAD
-
-                <Cartao itens={itens}/>
-
-            </div>
-=======
             }
->>>>>>> desenvolvimento
             <Rodape />
 
         </section>
