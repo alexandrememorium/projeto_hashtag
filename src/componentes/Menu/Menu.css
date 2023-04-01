@@ -52,16 +52,17 @@ div.navMenuWapper div.transpRolagem {
     -ms-filter: blur(3px);
     filter: blur(3px);
     filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius=100, MakeShadow=true);
-  
+
     opacity: 0.9;
     z-index: 20;
 }
+
 /* fim Menu transparente*/
 
 div.navMenu .logoImg {
     width: 130px;
     height: 23px;
-    
+
 }
 
 div.navMenu nav.appNav {
@@ -88,10 +89,12 @@ nav.appNav .navLink {
     text-decoration: none;
     cursor: pointer;
 }
+
 nav.appNav .navLink h2 {
     width: 40px;
     height: 12px;
 }
+
 nav.appNav .navLink:hover {
     text-decoration: underline;
     border: 1px solid #ffffff;
@@ -115,34 +118,34 @@ nav.appNav .navLink img {
     margin-right: 0.488rem;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
 
     div.navMenu {
         padding: 2.25rem 4rem;
     }
 
-    
+
     div.navMenu .logoImg {
         width: 220px;
         height: 40px;
     }
-    
+
     nav.appNav .navLink {
         width: 160px;
         height: 45px;
         font-size: 0.813rem;
         letter-spacing: 0.159rem;
     }
-    
+
     nav.appNav .navLink h2 {
         width: 68px;
         height: 20px;
-    }    
-    
-    nav.appNav .margenEntreAzulRosa{
+    }
+
+    nav.appNav .margenEntreAzulRosa {
         width: 2.188rem;
     }
-    
+
     nav.appNav .navLink img {
         width: 13px;
         height: 13px;
@@ -163,5 +166,16 @@ nav.appNav .navLink img {
     div.navMenuWapper div.transpRolagem {
         height: 7.1875rem;
     }
+
     /* fim Menu transparente*/
+}
+
+@media screen and (max-width: 370px) {
+    nav.appNav .navLink {
+        width: 20vw;
+    }
+
+    nav.appNav .navLink h2 {
+        font-size: 11px;
+    }
 }
