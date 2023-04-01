@@ -35,7 +35,7 @@ const Sobre = () => {
           .then((response) => {
             setTexto(response.records[0].fields.Sobre);
           })
-          .catch((erro) => console.log(erro));
+          // .catch((erro) => console.log(erro));
 
       
         fetch(
@@ -51,7 +51,7 @@ const Sobre = () => {
           .then((response) => {
             setEquipe(response.records);
           })
-          .catch((erro) => console.log(erro));
+          // .catch((erro) => console.log(erro));
       }, []);
 
     return ( 

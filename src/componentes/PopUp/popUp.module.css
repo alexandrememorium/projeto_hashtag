@@ -1,0 +1,11 @@
+.popUp > img {
+    width: 20%;
+}
+
+.imagemTweet {
+    max-width: 90%!important;
+}
+
+.botaoFechar {
+    display: none!important;
+}

@@ -71,7 +71,7 @@ function Home() {
         }
 
     }
-    console.log(valor)
+    
     return (
         <section>
 
