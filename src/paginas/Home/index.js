@@ -59,10 +59,10 @@ function Home() {
                             resultadoEncontrado.push(...res.users)
                             buscaTweets(`https://cors.eu.org/https://api.twitter.com/2/tweets/search/recent?query=${itemBusca} lang:pt has:images&expansions=attachments.media_keys,author_id,referenced_tweets.id,geo.place_id&media.fields=url&place.fields=country_code&user.fields=name,username,profile_image_url&next_token=${res.token}`);
                         } else {
-                            setValor(resultadoEncontrado.slice(0, 10));
+                            
                             setErro('');
                         }
-                    }).catch(erro => setErro(erro.message)).finally(() => {setCarregando(false)});
+                    }).catch(erro => setErro(erro.message)).finally(() => {setCarregando(false);setValor(resultadoEncontrado.slice(0, 10));});
                 }
                 buscaTweets(url)
             } else {
@@ -71,7 +71,7 @@ function Home() {
         }
 
     }
-    
+    console.log(valor)
     return (
         <section>
 
