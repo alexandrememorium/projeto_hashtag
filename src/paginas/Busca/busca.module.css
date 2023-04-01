@@ -1,7 +1,7 @@
 .fundoPagBusca {
     background-image: url(../../img/login-bg.jpg);
     width: 100%;
-    height: auto;
+    /*height: auto;*/
     background-size: cover;
     font-family: 'Rubik', sans-serif;    
 }
@@ -10,9 +10,10 @@
   background-image: url("../../img/login-bg.jpg");
   background-image: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 80em;
+  /*height: 100vh;
   width: 100vw;
-  padding: auto;
+  padding: auto;*/
 }
 
 .buscas_realizadas {
