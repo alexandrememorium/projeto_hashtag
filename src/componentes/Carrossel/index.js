@@ -44,7 +44,7 @@ function Carrossel({ itens }) {
                             setTrigger(true)}}>
                             <div className='carrosselConteudo'>
                                 <img src={tweet.media} alt=""/>
-                                <p>Postado por: {tweet.nome}<br></br>@${tweet.user}</p>
+                                <p>Postado por: {tweet.nome}<br></br>@{tweet.user}</p>
                             </div>
                         </SwiperSlide>)
 

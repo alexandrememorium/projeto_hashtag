@@ -2,7 +2,7 @@ class ConectaAPI {
 
     static resultado = [];
 
-    static async tweetsCartao(itemBusca, url = `https://cors.eu.org/https://api.twitter.com/2/tweets/search/recent?query=${itemBusca} lang:pt has:images&expansions=attachments.media_keys,author_id,referenced_tweets.id,geo.place_id&media.fields=url&place.fields=country_code&user.fields=name,username,profile_image_url`) {
+    static async conexãoComAPI(itemBusca, url = `https://cors.eu.org/https://api.twitter.com/2/tweets/search/recent?query=${itemBusca} lang:pt has:images&expansions=attachments.media_keys,author_id,referenced_tweets.id,geo.place_id&media.fields=url&place.fields=country_code&user.fields=name,username,profile_image_url`) {
         
         let twitterHeaders = new Headers();
         twitterHeaders.append("Authorization", "Bearer AAAAAAAAAAAAAAAAAAAAAFlKHgEAAAAApBW4nRyRkiogluzAbXlS4KuHlMU%3DFcR7r8N19LRnMHLVmYlFsod6Be6zUvZD2rxATotl6mLPAh2UEX");
@@ -11,6 +11,13 @@ class ConectaAPI {
             headers: twitterHeaders
         };
         const promise = await fetch(url, requestOptions).then((data) => data.json());
+        
+        return promise
+    }
+
+    static async tweetsCartao(itemBusca, url) {
+
+        const promise = await this.conexãoComAPI(itemBusca, url);
 
         if (promise.meta.result_count > 0) {
             const tweetsTexto = await promise.data.map((data) => {
@@ -29,15 +36,9 @@ class ConectaAPI {
         }
     }
 
-    static async tweetsCarrossel(itemBusca, url = `https://cors.eu.org/https://api.twitter.com/2/tweets/search/recent?query=${itemBusca} lang:pt has:images&expansions=attachments.media_keys,author_id,referenced_tweets.id,geo.place_id&media.fields=url&place.fields=country_code&user.fields=name,username,profile_image_url`) {
+    static async tweetsCarrossel(itemBusca, url) {
 
-        let twitterHeaders = new Headers();
-        twitterHeaders.append("Authorization", "Bearer AAAAAAAAAAAAAAAAAAAAAFlKHgEAAAAApBW4nRyRkiogluzAbXlS4KuHlMU%3DFcR7r8N19LRnMHLVmYlFsod6Be6zUvZD2rxATotl6mLPAh2UEX");
-        let requestOptions = {
-            method: 'GET',
-            headers: twitterHeaders
-        };
-        const promise = await fetch(url, requestOptions).then((data) => data.json());
+        const promise = await this.conexãoComAPI(itemBusca, url);
 
         if (promise.meta.result_count > 0) {
 
