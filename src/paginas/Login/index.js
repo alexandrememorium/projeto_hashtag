@@ -43,9 +43,14 @@ export default function Login() {
       getDadosLogin();
     }
   };
+//Antes
+//https://api.airtable.com/v0/app6wQWfM6eJngkD4/Login?maxRecords=1&view=Grid%20view&api_key=keykXHtsEPprqdSBF&filterByFormula=Find(%2203-23%22%2C+Squad)
+
+//Resolvido
+//https://api.airtable.com/v0/app6wQWfM6eJngkD4/Login?maxRecords=1&view=Grid%20view&api_key=keykXHtsEPprqdSBF&filterByFormula=(AND({Email}=%22"+email+"%22,{Senha}=%22"+password+"%22,{Squad}=%2203-23%22))
 
   let getDadosLogin = () => {
-    fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/Login?maxRecords=1&view=Grid%20view&api_key=keykXHtsEPprqdSBF&filterByFormula=Find(%2203-23%22%2C+Squad)", {
+    fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/Login?maxRecords=1&view=Grid%20view&api_key=keykXHtsEPprqdSBF&filterByFormula=(AND({Email}=%22"+email+"%22,{Senha}=%22"+password+"%22,{Squad}=%2203-23%22))", {
     })
     .then(resposta => resposta.json())
     .then(respostaJson => {
@@ -54,12 +59,15 @@ export default function Login() {
           setRedirecionaBusca(true)
           localStorage.setItem('logado', 'true');
           toast.success('Login bem sucedido!');
-          //alert('Login bem sucedido!');
-        } else {
-          setRedirecionaBusca(false);
-          toast.error('Usuário e senha não encontrados!');
-          //alert('Usuário e senha não encontrados!');
-        }
+        } 
+//        else {
+//          setRedirecionaBusca(false);
+//          toast.error('Usuário e senha não encontrados!');
+//        }
+    })
+    .catch(()=>{
+      setRedirecionaBusca(false);
+      toast.error('Usuário e senha não encontrados!');
     })
   }
 

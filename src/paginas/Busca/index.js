@@ -64,7 +64,7 @@ export default function Index() {
   return (
 
     <div className={styles.fundoPag}>
-      {redirecionaBusca === false ? <Redirect to="/" /> : ''}
+      {redirecionaBusca === false ? <Redirect to="/Login" /> : ''}
       <Menu headerHeightMobile={12.5} headerHeightDesktop={39.25} />
 
       <div className={styles.buscas_realizadas}>
