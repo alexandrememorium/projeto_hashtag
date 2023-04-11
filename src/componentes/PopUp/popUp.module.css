@@ -1,11 +1,7 @@
-.popUp > img {
-    width: 20%;
+.containerMain > img {
+    width: 80%;
 }
 
 .imagemTweet {
-    max-width: 90%!important;
-}
-
-.botaoFechar {
-    display: none!important;
+    max-width: 40%!important;
 }

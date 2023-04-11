@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'swiper/swiper-bundle.min.css';
 import { toast } from 'react-toastify';
 import Carrossel from '../../componentes/Carrossel';
@@ -17,9 +17,11 @@ function Home() {
     let [itemBusca, setItemBusca] = useState('');
     let [itemResultado, setItemResultado] = useState('');
 
-    const [valor, setValor] = useState(null);
+    const [tweetsCartao, setTweetsCartao] = useState(null);
+    const [tweetsCarrossel, setTweetsCarrossel] = useState(null);
     const [erro, setErro] = useState('');
     const [carregando, setCarregando] = useState(true);
+    const [pagina, setPagina] = useState('');
 
     var myHeaders = new Headers();
     myHeaders.append("content-type", "application/json");
@@ -49,29 +51,46 @@ function Home() {
                 });
                 setItemResultado(itemBusca);
 
-                let url = `https://cors.eu.org/https://api.twitter.com/2/tweets/search/recent?query=${itemBusca} lang:pt has:images&expansions=attachments.media_keys,author_id,referenced_tweets.id,geo.place_id&media.fields=url&place.fields=country_code&user.fields=name,username,profile_image_url`;
-
-                let resultadoEncontrado = [];
-
-                const buscaTweets = function (url) {
-                    conectaAPI(url).then(res => {
-                        if (resultadoEncontrado.length < 10) {
-                            resultadoEncontrado.push(...res.users)
-                            buscaTweets(`https://cors.eu.org/https://api.twitter.com/2/tweets/search/recent?query=${itemBusca} lang:pt has:images&expansions=attachments.media_keys,author_id,referenced_tweets.id,geo.place_id&media.fields=url&place.fields=country_code&user.fields=name,username,profile_image_url&next_token=${res.token}`);
-                        } else {
-                            
-                            setErro('');
-                        }
-                    }).catch(erro => setErro(erro.message)).finally(() => {setCarregando(false);setValor(resultadoEncontrado.slice(0, 10));});
-                }
-                buscaTweets(url)
+                Promise.all([
+                    conectaAPI.tweetsCartao(itemBusca),
+                    conectaAPI.tweetsCarrossel(itemBusca)])
+                    .then(res => {
+                        setTweetsCarrossel(res[1])
+                        setTweetsCartao(res[0].tweetsTexto);
+                        setPagina(res[0].token);
+                        setErro('')
+                    })
+                    .catch(erro => setErro(erro.message))
+                    .finally(() => setCarregando(false))
             } else {
                 toast.error('Digite alguma hashtag para a busca!');
             }
         }
-
     }
-    
+
+    useEffect(() => {
+        if (pagina) {
+            const observadorEndPoint = new IntersectionObserver((entries) => {
+                if (entries.some(entry => entry.isIntersecting)) {
+                    let url = `https://cors.eu.org/https://api.twitter.com/2/tweets/search/recent?query=${itemBusca} lang:pt has:images&expansions=attachments.media_keys,author_id,referenced_tweets.id,geo.place_id&media.fields=url&place.fields=country_code&user.fields=name,username,profile_image_url&next_token=${pagina}`;
+                    conectaAPI.tweetsCartao(itemBusca, url)
+                        .then(res => {
+                            setPagina(res.token)
+                            setTweetsCartao((camposAntigos) => {
+                                return [...camposAntigos, ...res.tweetsTexto]
+                            })
+                        })
+                        .catch(erro => setErro(erro.message))
+                        .finally(() => setCarregando(false));
+                }
+            })
+            observadorEndPoint.observe(document.querySelector('#observador'));
+
+            return () => observadorEndPoint.disconnect();
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [pagina])
+
     return (
         <section>
 
@@ -94,20 +113,24 @@ function Home() {
                 ></input>
             </div>
 
-            {!(carregando === false) ? '' : erro !== '' ?
+            {!(carregando === false) ? <div className={styles.containerCarregando}></div> : erro !== '' ?
+
                 <div className={styles.error}>
                     <h2>{erro}</h2>
                     <img src={imagem} alt="Erro" />
                 </div> :
-                <div className={styles.body}>
-                    <h2>Exibindo os 10 resultados mais recentes para #{itemResultado}</h2>
+                <>
+                    <div className={styles.body}>
+                        <h2>Exibindo os 10 resultados mais recentes para #{itemResultado}</h2>
 
-                    <div className={styles.carrosselContainer}>
-                        <Carrossel itens={valor} />
-                    </div>
+                        <div className={styles.carrosselContainer}>
+                            <Carrossel itens={tweetsCarrossel} />
+                        </div>
 
-                    <Cartao itens={valor} />
-                </div>
+                        <Cartao itens={tweetsCartao} />
+                    </div >
+                    <div id='observador'></div>
+                </>
             }
             <Rodape />
 

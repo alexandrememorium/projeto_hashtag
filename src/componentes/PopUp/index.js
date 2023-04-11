@@ -19,9 +19,11 @@ function PopUp({ trigger, setTrigger, setUser }) {
                 </div>,
             customClass: {
                 confirmButton: `${styles.botaoFechar}`,
-                image: `${styles.imagemTweet}`
+                image: `${styles.imagemTweet}`,
+                popup: `${styles.containerMain}`
             },
-            didClose: setTrigger(false)
+            didClose: setTrigger(false),
+            confirmButtonText: 'Fechar'
         })
     }
     return ('')
